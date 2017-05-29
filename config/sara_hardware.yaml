@@ -1,52 +1,55 @@
 robot_hardware:
-- sara_fl_base_motor
-- sara_fr_base_motor
-- sara_rl_base_motor
-- sara_rr_base_motor
-- sara_kinova_hardware_interface
-- sara_head_dynamixel
-- sara_arm_dynamixel
-- sara_robotiq_hardware_interface
+  - sara_fl_base_motor
+  - sara_fr_base_motor
+  - sara_rl_base_motor
+  - sara_rr_base_motor
+#  - sara_kinova_hardware_interface
+#  - sara_head_dynamixel
+#  - sara_arm_dynamixel
+#  - sara_robotiq_hardware_interface
 
 sara_fl_base_motor:
   type: wm_roboteq_hardware_interface/WMRoboteqHardwareInteface
   joints:
-  - front_left_mecanum_wheel_joint
+    - front_left_mecanum_wheel_joint
+
 sara_fr_base_motor:
   type: wm_roboteq_hardware_interface/WMRoboteqHardwareInteface
   joints:
-  - front_right_mecanum_wheel_joint
+    - front_right_mecanum_wheel_joint
+
 sara_rl_base_motor:
   type: wm_roboteq_hardware_interface/WMRoboteqHardwareInteface
   joints:
-  - rear_left_mecanum_wheel_joint
+    - rear_left_mecanum_wheel_joint
+
 sara_rr_base_motor:
   type: wm_roboteq_hardware_interface/WMRoboteqHardwareInteface
   joints:
-  - rear_left_mecanum_wheel_joint
+    - rear_left_mecanum_wheel_joint
 
-sara_kinova_hardware_interface:
-  type: wm_kinova_hardware_interface/WMKinovaHardwareInteface
-  joints:
-  - right_shoulder_roll_joint
-  - right_shoulder_pitch_joint
-  - right_shoulder_yaw_joint
-  - right_elbow_pitch_joint
-  - right_elbow_yaw_joint
-
-sara_head_dynamixel:
-  type: wm_dynamixel_hardware_interface/WMDynamixelHardwareInteface
-    joints:
-    - head_pitch_joint
-    - head_yaw_joint
-
-sara_arm_dynamixel:
-  type: wm_dynamixel_hardware_interface/WMDynamixelHardwareInteface
-  joints:
-  - right_wrist_pitch_joint
-  - right_wrist_roll_joint
-
-sara_robotiq_hardware_interface:
-  type: wm_robotiq_hardware_interface/WMRobotiqHardwareInteface
-  joints:
-  - right_robotiq_85_left_knuckle_joint
+#sara_kinova_hardware_interface:
+#  type: wm_kinova_hardware_interface/WMKinovaHardwareInteface
+#  joints:
+#    - right_shoulder_roll_joint
+#    - right_shoulder_pitch_joint
+#    - right_shoulder_yaw_joint
+#    - right_elbow_pitch_joint
+#    - right_elbow_yaw_joint
+#
+#sara_head_dynamixel:
+#  type: wm_dynamixel_hardware_interface/WMDynamixelHardwareInteface
+#  joints:
+#    - head_pitch_joint
+#    - head_yaw_joint
+#
+#sara_arm_dynamixel:
+#  type: wm_dynamixel_hardware_interface/WMDynamixelHardwareInteface
+#  joints:
+#    - right_wrist_pitch_joint
+#    - right_wrist_roll_joint
+#
+#sara_robotiq_hardware_interface:
+#  type: wm_robotiq_hardware_interface/WMRobotiqHardwareInteface
+#  joints:
+#    - right_robotiq_85_left_knuckle_joint
