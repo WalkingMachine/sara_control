@@ -3,7 +3,11 @@ robot_hardware:
   - sara_fr_base_motor
   - sara_rl_base_motor
   - sara_rr_base_motor
-#  - sara_kinova_hardware_interface
+  - sara_torso_arm_joint
+  - sara_arm_shoulder_joint
+  - sara_arm_rot_elbow_joint
+  - sara_arm_elbow_joint
+  - sara_arm_rot_wrist_joint
 #  - sara_head_dynamixel
 #  - sara_arm_dynamixel
 #  - sara_robotiq_hardware_interface
@@ -28,15 +32,32 @@ sara_rr_base_motor:
   joints:
     - rear_left_mecanum_wheel_joint
 
-#sara_kinova_hardware_interface:
-#  type: wm_kinova_hardware_interface/WMKinovaHardwareInteface
-#  joints:
-#    - right_shoulder_roll_joint
-#    - right_shoulder_pitch_joint
-#    - right_shoulder_yaw_joint
-#    - right_elbow_pitch_joint
-#    - right_elbow_yaw_joint
-#
+sara_torso_arm_joint:
+  type: wm_kinova_hardware_interface/torso_arm_joint
+  joints:
+    - torso_arm_joint
+
+sara_arm_shoulder_joint:
+  type: wm_kinova_hardware_interface/arm_shoulder_joint
+  joints:
+    - arm_shoulder_joint
+
+sara_arm_rot_elbow_joint:
+  type: wm_kinova_hardware_interface/arm_rot_elbow_joint
+  joints:
+    - arm_rot_elbow_joint
+
+sara_arm_elbow_joint:
+  type: wm_kinova_hardware_interface/arm_elbow_joint
+  joints:
+    - arm_elbow_joint
+
+sara_arm_rot_wrist_joint:
+  type: wm_kinova_hardware_interface/arm_rot_wrist_joint
+  joints:
+    - arm_rot_wrist_joint
+    
+
 #sara_head_dynamixel:
 #  type: wm_dynamixel_hardware_interface/WMDynamixelHardwareInteface
 #  joints:
