@@ -33,30 +33,30 @@ sara_rr_base_motor:
     - rear_left_mecanum_wheel_joint
 
 sara_torso_arm_joint:
-  type: wm_kinova_hardware_interface/torso_arm_joint
-  joints:
-    - torso_arm_joint
+  type: wm_kinova_hardware_interface/kinova_hardware_interface
+  Name: torso_arm_joint
+  Index: 0
 
 sara_arm_shoulder_joint:
-  type: wm_kinova_hardware_interface/arm_shoulder_joint
-  joints:
-    - arm_shoulder_joint
+  type: wm_kinova_hardware_interface/kinova_hardware_interface
+  Name: arm_shoulder_joint
+  Index: 1
 
 sara_arm_rot_elbow_joint:
-  type: wm_kinova_hardware_interface/arm_rot_elbow_joint
-  joints:
-    - arm_rot_elbow_joint
+  type: wm_kinova_hardware_interface/kinova_hardware_interface
+  Name: arm_rot_elbow_joint
+  Index: 2
 
 sara_arm_elbow_joint:
-  type: wm_kinova_hardware_interface/arm_elbow_joint
-  joints:
-    - arm_elbow_joint
+  type: wm_kinova_hardware_interface/kinova_hardware_interface
+  Name: arm_elbow_joint
+  Index: 3
 
 sara_arm_rot_wrist_joint:
-  type: wm_kinova_hardware_interface/arm_rot_wrist_joint
-  joints:
-    - arm_rot_wrist_joint
-    
+  type: wm_kinova_hardware_interface/kinova_hardware_interface
+  Name: arm_rot_wrist_joint
+  Index: 4
+
 
 #sara_head_dynamixel:
 #  type: wm_dynamixel_hardware_interface/WMDynamixelHardwareInteface
