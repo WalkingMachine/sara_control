@@ -56,7 +56,6 @@ sara_right_elbow_yaw_motor:
   type: wm_kinova_hardware_interface/WMKinovaHardwareInteface
   joints:
     - right_elbow_yaw_joint
->>>>>>> 3a7f4f169bf63906657a1890cdc181c396e5e896
 
 #sara_head_dynamixel:
 #  type: wm_dynamixel_hardware_interface/WMDynamixelHardwareInteface
