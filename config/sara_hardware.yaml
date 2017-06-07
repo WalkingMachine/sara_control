@@ -33,29 +33,34 @@ sara_rear_right_base_motor:
     - rear_left_mecanum_wheel_joint
 
 sara_right_shoulder_roll_motor:
-  type: wm_kinova_hardware_interface/WMKinovaHardwareInteface
+  type: wm_WMKinovaHardwareInteface/WMKinovaHardwareInteface
   joints:
     - right_shoulder_roll_joint
+  Index: 0
 
 sara_right_shoulder_pitch_motor:
-  type: wm_kinova_hardware_interface/WMKinovaHardwareInteface
+  type: wm_WMKinovaHardwareInteface/WMKinovaHardwareInteface
   joints:
     - right_shoulder_pitch_joint
+  Index: 1
 
 sara_right_shoulder_yaw_motor:
-  type: wm_kinova_hardware_interface/WMKinovaHardwareInteface
+  type: wm_WMKinovaHardwareInteface/WMKinovaHardwareInteface
   joints:
     - right_shoulder_yaw_joint
+  Index: 2
 
 sara_right_elbow_pitch_motor:
-  type: wm_kinova_hardware_interface/WMKinovaHardwareInteface
+  type: wm_WMKinovaHardwareInteface/WMKinovaHardwareInteface
   joints:
     - right_elbow_pitch_joint
+  Index: 3
 
 sara_right_elbow_yaw_motor:
-  type: wm_kinova_hardware_interface/WMKinovaHardwareInteface
+  type: wm_WMKinovaHardwareInteface/WMKinovaHardwareInteface
   joints:
     - right_elbow_yaw_joint
+  Index: 4
 
 #sara_head_dynamixel:
 #  type: wm_dynamixel_hardware_interface/WMDynamixelHardwareInteface
