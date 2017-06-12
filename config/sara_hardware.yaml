@@ -1,17 +1,17 @@
 robot_hardware:
-  - sara_front_left_base_motor
-  - sara_front_right_base_motor
-  - sara_rear_left_base_motor
-  - sara_rear_right_base_motor
-  - torso_arm_joint
-  - arm_shoulder_joint
-  - arm_rot_elbow_joint
-  - arm_elbow_joint
-  - arm_rot_wrist_joint
-  - arm_high_low_wrist_joint
-  - arm_low_wrist_grasp_socket_joint
-  - sara_head_dynamixel
-  - sara_robotiq_hardware_interface
+#  - sara_front_left_base_motor
+#  - sara_front_right_base_motor
+#  - sara_rear_left_base_motor
+#  - sara_rear_right_base_motor
+  - right_shoulder_roll_joint
+  - right_shoulder_pitch_joint
+  - right_shoulder_yaw_joint
+  - right_elbow_pitch_joint
+  - right_elbow_yaw_joint
+  - right_wrist_pitch_joint
+  - right_wrist_roll_joint
+#  - sara_head_dynamixel
+#  - sara_robotiq_hardware_interface
 
 
 #--<< WHEELS >>--
@@ -36,56 +36,56 @@ sara_rear_right_base_motor:
     - rear_left_mecanum_wheel_joint
 
 #--<< ARM >>--
-torso_arm_joint:
+right_shoulder_roll_joint:
   type: wm_kinova_hardware_interface/WMKinovaHardwareInteface
   index: 0
   offset: 5.238630596444606
   joints:
-    - torso_arm_joint
+    - right_shoulder_roll_joint
 
-arm_shoulder_joint:
+right_shoulder_pitch_joint:
   type: wm_kinova_hardware_interface/WMKinovaHardwareInteface
   index: 1
   offset: 3.136681340526342
   joints:
-    - arm_shoulder_joint
+    - right_shoulder_pitch_joint
 
-arm_rot_elbow_joint:
+right_shoulder_yaw_joint:
   type: wm_kinova_hardware_interface/WMKinovaHardwareInteface
   index: 2
   offset: 1.2685709858754277
   joints:
-    - arm_rot_elbow_joint
+    - right_shoulder_yaw_joint
 
-arm_elbow_joint:
+right_elbow_pitch_joint:
   type: wm_kinova_hardware_interface/WMKinovaHardwareInteface
   index: 3
   offset: 4.522773000748157
   joints:
-    - arm_elbow_joint
+    - right_elbow_pitch_joint
 
-arm_rot_wrist_joint:
+right_elbow_yaw_joint:
   type: wm_kinova_hardware_interface/WMKinovaHardwareInteface
   index: 4
   offset: 4.763554975575208
   joints:
-    - arm_rot_wrist_joint
+    - right_elbow_yaw_joint
 
-arm_high_low_wrist_joint:
+right_wrist_pitch_joint:
   type: wm_kinova_hardware_interface/WMKinovaHardwareInteface # Temporary definition. Do not let it this way!
 #  type: wm_dynamixel_hardware_interface/WMDynamixelHardwareInteface # This one is the right one
   index: 5
   offset: 0.0
   joints:
-    - arm_high_low_wrist_joint
+    - right_wrist_pitch_joint
 
-arm_low_wrist_grasp_socket_joint:
+right_wrist_roll_joint:
   type: wm_kinova_hardware_interface/WMKinovaHardwareInteface # Temporary definition. Do not let it this way!
 #  type: wm_dynamixel_hardware_interface/WMDynamixelHardwareInteface # This one is the right one
   index: 5
   offset: 0.0
   joints:
-    - arm_low_wrist_grasp_socket_joint
+    - right_wrist_roll_joint
 
 
 #<< GRIPPER >>
