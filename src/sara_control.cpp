@@ -29,13 +29,13 @@ int main(int argc, char **argv)
   //std::string moveBaseActionName = "/move_base";
   //nh.param("/sara_supervisor_node/move_base_action_name", moveBaseActionName, moveBaseActionName);
 
-  ros::Duration period(0.01);
+  ros::Duration period(0.02);  // 50 Hz
 
   while (ros::ok()) {
     chw.read(ros::Time::now(), period);
     cm.update(ros::Time::now(), period);
     chw.write(ros::Time::now(), period);
-    //period.sleep();
+    period.sleep();
   }
   return 0;
 }
