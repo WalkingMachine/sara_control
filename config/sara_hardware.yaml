@@ -16,22 +16,22 @@ robot_hardware:
 
 #--<< WHEELS >>--
 sara_front_left_base_motor:
-  type: wm_roboteq_hardware_interface/WMRoboteqHardwareInteface
+  type: wm_roboteq_hardware_interface/WMRoboteqHardwareInterface
   joints:
     - front_left_mecanum_wheel_joint
 
 sara_front_right_base_motor:
-  type: wm_roboteq_hardware_interface/WMRoboteqHardwareInteface
+  type: wm_roboteq_hardware_interface/WMRoboteqHardwareInterface
   joints:
     - front_right_mecanum_wheel_joint
 
 sara_rear_left_base_motor:
-  type: wm_roboteq_hardware_interface/WMRoboteqHardwareInteface
+  type: wm_roboteq_hardware_interface/WMRoboteqHardwareInterface
   joints:
     - rear_left_mecanum_wheel_joint
 
 sara_rear_right_base_motor:
-  type: wm_roboteq_hardware_interface/WMRoboteqHardwareInteface
+  type: wm_roboteq_hardware_interface/WMRoboteqHardwareInterface
   joints:
     - rear_left_mecanum_wheel_joint
 
@@ -73,7 +73,7 @@ right_elbow_yaw_joint:
 
 right_wrist_pitch_joint:
   type: wm_kinova_hardware_interface/WMKinovaHardwareInterface # Temporary definition. Do not let it this way!
-#  type: wm_dynamixel_hardware_interface/WMDynamixelHardwareInteface # This one is the right one
+#  type: wm_dynamixel_hardware_interface/WMDynamixelHardwareInterface # This one is the right one
   index: 5
   offset: 0.0
   joints:
@@ -81,7 +81,7 @@ right_wrist_pitch_joint:
 
 right_wrist_roll_joint:
   type: wm_kinova_hardware_interface/WMKinovaHardwareInterface # Temporary definition. Do not let it this way!
-#  type: wm_dynamixel_hardware_interface/WMDynamixelHardwareInteface # This one is the right one
+#  type: wm_dynamixel_hardware_interface/WMDynamixelHardwareInterface # This one is the right one
   index: 5
   offset: 0.0
   joints:
@@ -90,18 +90,18 @@ right_wrist_roll_joint:
 
 #<< GRIPPER >>
 sara_robotiq_hardware_interface:
-  type: wm_robotiq_hardware_interface/WMRobotiqHardwareInteface
+  type: wm_robotiq_hardware_interface/WMRobotiqHardwareInterface
   joints:
     - right_robotiq_85_left_knuckle_joint
 
 
 #--<< HEAD >>--
 sara_head_dynamixel:
-  type: wm_dynamixel_hardware_interface/WMDynamixelHardwareInteface
+  type: wm_dynamixel_hardware_interface/WMDynamixelHardwareInterface
   joints:
     - head_pitch_joint
 
 sara_head_dynamixel:
-  type: wm_dynamixel_hardware_interface/WMDynamixelHardwareInteface
+  type: wm_dynamixel_hardware_interface/WMDynamixelHardwareInterface
   joints:
     - head_yaw_joint
