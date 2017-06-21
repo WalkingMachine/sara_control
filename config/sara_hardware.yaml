@@ -37,42 +37,42 @@ sara_rear_right_base_motor:
 
 #--<< ARM >>--
 right_shoulder_roll_joint:
-  type: wm_kinova_hardware_interface/WMKinovaHardwareInteface
+  type: wm_kinova_hardware_interface/WMKinovaHardwareInterface
   index: 0
   offset: 5.238630596444606
   joints:
     - right_shoulder_roll_joint
 
 right_shoulder_pitch_joint:
-  type: wm_kinova_hardware_interface/WMKinovaHardwareInteface
+  type: wm_kinova_hardware_interface/WMKinovaHardwareInterface
   index: 1
   offset: 3.136681340526342
   joints:
     - right_shoulder_pitch_joint
 
 right_shoulder_yaw_joint:
-  type: wm_kinova_hardware_interface/WMKinovaHardwareInteface
+  type: wm_kinova_hardware_interface/WMKinovaHardwareInterface
   index: 2
   offset: 1.2685709858754277
   joints:
     - right_shoulder_yaw_joint
 
 right_elbow_pitch_joint:
-  type: wm_kinova_hardware_interface/WMKinovaHardwareInteface
+  type: wm_kinova_hardware_interface/WMKinovaHardwareInterface
   index: 3
   offset: 4.522773000748157
   joints:
     - right_elbow_pitch_joint
 
 right_elbow_yaw_joint:
-  type: wm_kinova_hardware_interface/WMKinovaHardwareInteface
+  type: wm_kinova_hardware_interface/WMKinovaHardwareInterface
   index: 4
   offset: 4.763554975575208
   joints:
     - right_elbow_yaw_joint
 
 right_wrist_pitch_joint:
-  type: wm_kinova_hardware_interface/WMKinovaHardwareInteface # Temporary definition. Do not let it this way!
+  type: wm_kinova_hardware_interface/WMKinovaHardwareInterface # Temporary definition. Do not let it this way!
 #  type: wm_dynamixel_hardware_interface/WMDynamixelHardwareInteface # This one is the right one
   index: 5
   offset: 0.0
@@ -80,7 +80,7 @@ right_wrist_pitch_joint:
     - right_wrist_pitch_joint
 
 right_wrist_roll_joint:
-  type: wm_kinova_hardware_interface/WMKinovaHardwareInteface # Temporary definition. Do not let it this way!
+  type: wm_kinova_hardware_interface/WMKinovaHardwareInterface # Temporary definition. Do not let it this way!
 #  type: wm_dynamixel_hardware_interface/WMDynamixelHardwareInteface # This one is the right one
   index: 5
   offset: 0.0
