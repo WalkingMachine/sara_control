@@ -8,32 +8,45 @@
 
 using namespace sara_control_ns;
 
+void stopSignalService(const std_msgs::Bool& msg)
+{
+  last_tic = ros::Time::now();
+}
+
+void startButton(const std_msgs::Bool& msg)
+{
+  last_tic = ros::Time::now();
+}
+
 int main(int argc, char **argv)
 {
+  bool ESTOP;
+
   ros::init(argc, argv, "sara_control");
-
-  ros::AsyncSpinner spinner(1);
-  spinner.start();
-
   ros::NodeHandle nh;
+
+  ros::Subscriber eStopSub = nh.subscribe("start_button_msg", 1, &eStopCallback);
+  stopSignalSrv_ = nh_.advertiseService("safety_stop_srv", &wmSupervisor::stopSignalService, this);
+
   combined_robot_hw::CombinedRobotHW chw;
 
   chw.init(nh, nh);
 
   controller_manager::ControllerManager cm(&chw, nh);
 
-  /// Commented in wait of the e-stop integration
-  //std::string moveArmActionName = "/sara_arm_driver_node/execute_plan";
-  //nh.param("/sara_supervisor_node/move_arm_action_name", moveArmActionName, moveArmActionName);
-
-  //std::string moveBaseActionName = "/move_base";
-  //nh.param("/sara_supervisor_node/move_base_action_name", moveBaseActionName, moveBaseActionName);
 
   ros::Duration period(0.02);
 
   while (ros::ok()) {
     chw.read(ros::Time::now(), period);
-    cm.update(ros::Time::now(), period);
+    if (ESTOP || last_tic + 0.5 > ros::Time::now())
+    {
+      cm.update(ros::Time::now(), period, true);
+    }
+    else
+    {
+      cm.update(ros::Time::now(), period, false);
+    }
     chw.write(ros::Time::now(), period);
     period.sleep();
   }
