@@ -5,21 +5,7 @@
 #include <controller_manager/controller_manager.h>
 #include <combined_robot_hw/combined_robot_hw.h>
 
-<<<<<<< HEAD
-using namespace sara_control_ns;
 
-void stopSignalService(const std_msgs::Bool& msg)
-{
-  last_tic = ros::Time::now();
-}
-
-void startButton(const std_msgs::Bool& msg)
-{
-  last_tic = ros::Time::now();
-}
-
-=======
->>>>>>> add_kinova_joints
 int main(int argc, char **argv)
 {
   bool ESTOP;
@@ -30,11 +16,6 @@ int main(int argc, char **argv)
   ros::Subscriber eStopSub = nh.subscribe("start_button_msg", 1, &eStopCallback);
   stopSignalSrv_ = nh_.advertiseService("safety_stop_srv", &wmSupervisor::stopSignalService, this);
 
-<<<<<<< HEAD
-=======
-  ros::NodeHandle nh;
-
->>>>>>> add_kinova_joints
   combined_robot_hw::CombinedRobotHW chw;
 
   chw.init(nh, nh);
