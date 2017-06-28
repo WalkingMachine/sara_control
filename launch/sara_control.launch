@@ -1,8 +1,0 @@
-<?xml version='1.0'?>
-<launch>
-    <!-- load hardware config -->
-    <rosparam command="load" file="$(find sara_control)/config/sara_hardware.yaml"/>
-
-    <!-- launch control manager -->
-    <node pkg="sara_control" type="sara_control" name="sara_control" output="screen"/>
-</launch>
