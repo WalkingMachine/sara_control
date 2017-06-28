@@ -3,10 +3,7 @@
 //
 #include <ros/ros.h>
 #include <controller_manager/controller_manager.h>
-#include <sara_control/sara_control.h>
 #include <combined_robot_hw/combined_robot_hw.h>
-
-using namespace sara_control_ns;
 
 int main(int argc, char **argv)
 {
@@ -16,6 +13,7 @@ int main(int argc, char **argv)
   spinner.start();
 
   ros::NodeHandle nh;
+
   combined_robot_hw::CombinedRobotHW chw;
 
   chw.init(nh, nh);
@@ -31,7 +29,9 @@ int main(int argc, char **argv)
 
   ros::Duration period(0.02);  // 50 Hz
 
-  while (ros::ok()) {
+  while (ros::ok())
+  {
+    ROS_DEBUG("Test");
     chw.read(ros::Time::now(), period);
     cm.update(ros::Time::now(), period);
     chw.write(ros::Time::now(), period);

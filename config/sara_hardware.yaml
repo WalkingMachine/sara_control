@@ -1,77 +1,86 @@
 robot_hardware:
-#  - sara_front_left_base_motor
-#  - sara_front_right_base_motor
-#  - sara_rear_left_base_motor
-#  - sara_rear_right_base_motor
-  - right_shoulder_roll_joint
-  - right_shoulder_pitch_joint
-  - right_shoulder_yaw_joint
-  - right_elbow_pitch_joint
-  - right_elbow_yaw_joint
-  - right_wrist_pitch_joint
-  - right_wrist_roll_joint
-#  - sara_head_dynamixel
+  - sara_front_left_base_motor
+  - sara_front_right_base_motor
+  - sara_rear_left_base_motor
+  - sara_rear_right_base_motor
+  - sara_right_shoulder_roll_joint
+  - sara_right_shoulder_pitch_joint
+  - sara_right_shoulder_yaw_joint
+  - sara_right_elbow_pitch_joint
+  - sara_right_elbow_yaw_joint
+#  - sara_right_wrist_pitch_joint
+#  - sara_right_wrist_roll_joint
+#  - sara_head_pitch_dynamixel
+#  - sara_head_yaw_dynamixel
 #  - sara_robotiq_hardware_interface
 
 
 #--<< WHEELS >>--
 sara_front_left_base_motor:
   type: wm_roboteq_hardware_interface/WMRoboteqHardwareInterface
+  feedback_topic: roboteq_driver_FLW/feedback
+  cmd_topic: roboteq_driver_FLW/cmd
   joints:
     - front_left_mecanum_wheel_joint
 
 sara_front_right_base_motor:
   type: wm_roboteq_hardware_interface/WMRoboteqHardwareInterface
+  feedback_topic: roboteq_driver_FRW/feedback
+  cmd_topic: roboteq_driver_FRW/cmd
   joints:
     - front_right_mecanum_wheel_joint
 
 sara_rear_left_base_motor:
   type: wm_roboteq_hardware_interface/WMRoboteqHardwareInterface
+  feedback_topic: roboteq_driver_RLW/feedback
+  cmd_topic: roboteq_driver_RLW/cmd
   joints:
     - rear_left_mecanum_wheel_joint
 
 sara_rear_right_base_motor:
   type: wm_roboteq_hardware_interface/WMRoboteqHardwareInterface
+  feedback_topic: roboteq_driver_RRW/feedback
+  cmd_topic: roboteq_driver_RRW/cmd
   joints:
     - rear_left_mecanum_wheel_joint
 
 #--<< ARM >>--
-right_shoulder_roll_joint:
+sara_right_shoulder_roll_joint:
   type: wm_kinova_hardware_interface/WMKinovaHardwareInterface
   index: 0
   offset: 5.238630596444606
   joints:
     - right_shoulder_roll_joint
 
-right_shoulder_pitch_joint:
+sara_right_shoulder_pitch_joint:
   type: wm_kinova_hardware_interface/WMKinovaHardwareInterface
   index: 1
   offset: 3.136681340526342
   joints:
     - right_shoulder_pitch_joint
 
-right_shoulder_yaw_joint:
+sara_right_shoulder_yaw_joint:
   type: wm_kinova_hardware_interface/WMKinovaHardwareInterface
   index: 2
   offset: 1.2685709858754277
   joints:
     - right_shoulder_yaw_joint
 
-right_elbow_pitch_joint:
+sara_right_elbow_pitch_joint:
   type: wm_kinova_hardware_interface/WMKinovaHardwareInterface
   index: 3
   offset: 4.522773000748157
   joints:
     - right_elbow_pitch_joint
 
-right_elbow_yaw_joint:
+sara_right_elbow_yaw_joint:
   type: wm_kinova_hardware_interface/WMKinovaHardwareInterface
   index: 4
   offset: 4.763554975575208
   joints:
     - right_elbow_yaw_joint
 
-right_wrist_pitch_joint:
+sara_right_wrist_pitch_joint:
   type: wm_kinova_hardware_interface/WMKinovaHardwareInterface # Temporary definition. Do not let it this way!
 #  type: wm_dynamixel_hardware_interface/WMDynamixelHardwareInterface # This one is the right one
   index: 5
@@ -79,7 +88,7 @@ right_wrist_pitch_joint:
   joints:
     - right_wrist_pitch_joint
 
-right_wrist_roll_joint:
+sara_right_wrist_roll_joint:
   type: wm_kinova_hardware_interface/WMKinovaHardwareInterface # Temporary definition. Do not let it this way!
 #  type: wm_dynamixel_hardware_interface/WMDynamixelHardwareInterface # This one is the right one
   index: 5

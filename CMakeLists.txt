@@ -5,11 +5,10 @@ project(sara_control)
 ## if COMPONENTS list like find_package(catkin REQUIRED COMPONENTS xyz)
 ## is used, also find other catkin packages
 find_package(catkin REQUIRED COMPONENTS
-    roscpp
-    hardware_interface
-    controller_manager
-    combined_robot_hw
-)
+        roscpp
+        controller_manager
+        combined_robot_hw
+        )
 
 ## System dependencies are found with CMake's conventions
 # find_package(Boost REQUIRED COMPONENTS system)
@@ -67,7 +66,7 @@ find_package(catkin REQUIRED COMPONENTS
 ## Generate added messages and services with any dependencies listed here
 #generate_messages(
 #        DEPENDENCIES
-        #   actionlib_msgs#   move_base_msgs#   wm_arm_msgs
+#   actionlib_msgs#   move_base_msgs#   wm_arm_msgs
 #)
 
 ################################################
@@ -100,8 +99,8 @@ find_package(catkin REQUIRED COMPONENTS
 ## CATKIN_DEPENDS: catkin_packages dependent projects also need
 ## DEPENDS: system dependencies of this project that dependent projects also need
 catkin_package(
-        INCLUDE_DIRS include
-#        CATKIN_DEPENDS actionlib actionlib_msgs move_base_msgs roscpp message_generation std_srvs std_msgs
+        #INCLUDE_DIRS include
+        CATKIN_DEPENDS roscpp controller_manager combined_robot_hw
 )
 
 
@@ -111,9 +110,10 @@ catkin_package(
 
 ## Specify additional locations of header files
 ## Your package locations should be listed before other locations
-include_directories(include ${catkin_INCLUDE_DIRS})
+include_directories(#include
+        ${catkin_INCLUDE_DIRS})
 
-        ## Declare a C++ library
+## Declare a C++ library
 # add_library(sara_control
 #   src/${PROJECT_NAME}/sara_control.cpp
 # )
@@ -131,7 +131,7 @@ add_executable(sara_control src/sara_control.cpp)
 # add_dependencies(sara_control ${${PROJECT_NAME}_EXPORTED_TARGETS} ${catkin_EXPORTED_TARGETS})
 
 ## Specify libraries to link a library or executable target against
- target_link_libraries(sara_control ${catkin_LIBRARIES} rt)
+target_link_libraries(sara_control ${catkin_LIBRARIES} rt)
 
 #############
 ## Install ##
