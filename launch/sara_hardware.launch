@@ -1,0 +1,10 @@
+<?xml version='1.0'?>
+
+<launch>
+  <!-- load the hardware configuration -->
+  <rosparam command="load" file="$(find sara_control)/config/sara_hardware.yaml"/>
+
+  <!--    start the hardwares loop   -->
+  <node name="sara_control" pkg="sara_control" type="sara_control"/>
+
+</launch>
