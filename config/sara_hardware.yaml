@@ -46,7 +46,7 @@ sara_rear_right_base_motor:
 
 #--<< ARM >>--
 sara_right_shoulder_roll_joint:
-  type: wm_kinova_hardware_interface/WMKinovaHardwareInterface
+  type: wm_kinova_hardware_interface/WMKinovaHardwareInteface
   index: 0
   offset: 5.238630596444606
   joints:
