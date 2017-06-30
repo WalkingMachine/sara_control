@@ -3,11 +3,11 @@ robot_hardware:
   - sara_front_right_base_motor
   - sara_rear_left_base_motor
   - sara_rear_right_base_motor
-  - sara_right_shoulder_roll_joint
-  - sara_right_shoulder_pitch_joint
-  - sara_right_shoulder_yaw_joint
-  - sara_right_elbow_pitch_joint
-  - sara_right_elbow_yaw_joint
+#  - sara_right_shoulder_roll_joint
+#  - sara_right_shoulder_pitch_joint
+#  - sara_right_shoulder_yaw_joint
+#  - sara_right_elbow_pitch_joint
+#  - sara_right_elbow_yaw_joint
 #  - sara_right_wrist_pitch_joint
 #  - sara_right_wrist_roll_joint
 #  - sara_head_pitch_dynamixel
@@ -18,29 +18,29 @@ robot_hardware:
 #--<< WHEELS >>--
 sara_front_left_base_motor:
   type: wm_roboteq_hardware_interface/WMRoboteqHardwareInterface
-  feedback_topic: roboteq_driver_FLW/feedback
-  cmd_topic: roboteq_driver_FLW/cmd
+  feedback_topic: drive0/feedback0
+  cmd_topic: drive0/cmd0
   joints:
     - front_left_mecanum_wheel_joint
 
 sara_front_right_base_motor:
   type: wm_roboteq_hardware_interface/WMRoboteqHardwareInterface
-  feedback_topic: roboteq_driver_FRW/feedback
-  cmd_topic: roboteq_driver_FRW/cmd
+  feedback_topic: drive1/feedback1
+  cmd_topic: drive1/cmd1
   joints:
     - front_right_mecanum_wheel_joint
 
 sara_rear_left_base_motor:
   type: wm_roboteq_hardware_interface/WMRoboteqHardwareInterface
-  feedback_topic: roboteq_driver_RLW/feedback
-  cmd_topic: roboteq_driver_RLW/cmd
+  feedback_topic: drive2/feedback2
+  cmd_topic: drive2/cmd2
   joints:
     - rear_left_mecanum_wheel_joint
 
 sara_rear_right_base_motor:
   type: wm_roboteq_hardware_interface/WMRoboteqHardwareInterface
-  feedback_topic: roboteq_driver_RRW/feedback
-  cmd_topic: roboteq_driver_RRW/cmd
+  feedback_topic: drive3/feedback3
+  cmd_topic: drive3/cmd3
   joints:
     - rear_left_mecanum_wheel_joint
 
