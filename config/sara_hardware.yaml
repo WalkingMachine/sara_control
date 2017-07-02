@@ -46,7 +46,7 @@ sara_rear_right_base_motor:
 
 #--<< ARM >>--
 sara_right_shoulder_roll_joint:
-  type: wm_kinova_hardware_interface/WMKinovaHardwareInteface
+  type: wm_kinova_hardware_interface/WMKinovaHardwareInterface
   index: 0
   offset: 5.238630596444606
   joints:
@@ -101,12 +101,14 @@ sara_robotiq_hardware_interface:
 
 
 #--<< HEAD >>--
-sara_head_dynamixel:
+sara_head_pitch_dynamixel:
   type: wm_dynamixel_hardware_interface/WMDynamixelHardwareInterface
   joints:
     - head_pitch_joint
+  id: 3
 
-sara_head_dynamixel:
+sara_head_yaw_dynamixel:
   type: wm_dynamixel_hardware_interface/WMDynamixelHardwareInterface
   joints:
     - head_yaw_joint
+  id: 4
