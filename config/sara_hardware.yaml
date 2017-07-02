@@ -10,8 +10,8 @@ robot_hardware:
   - sara_right_elbow_yaw_joint
   - sara_right_wrist_pitch_joint
   - sara_right_wrist_roll_joint
-  - sara_head_pitch_dynamixel
-  - sara_head_yaw_dynamixel
+#  - sara_head_pitch_dynamixel
+#  - sara_head_yaw_dynamixel
   - sara_robotiq_hardware_interface
 
 
@@ -84,13 +84,13 @@ sara_right_wrist_pitch_joint:
   type: wm_dynamixel_hardware_interface/WMDynamixelHardwareInterface
   joints:
     - right_wrist_pitch_joint
-  id: 1
+  id: 2
 
 sara_right_wrist_roll_joint:
   type: wm_dynamixel_hardware_interface/WMDynamixelHardwareInterface
   joints:
     - right_wrist_roll_joint
-  id: 2
+  id: 1
 
 
 #<< GRIPPER >>
