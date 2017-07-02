@@ -13,6 +13,9 @@ int main(int argc, char **argv)
   ros::init(argc, argv, "sara_control");
   ros::NodeHandle nh;
 
+  ros::AsyncSpinner spinner(1);
+  spinner.start();
+    
   combined_robot_hw::CombinedRobotHW chw;
 
   chw.init(nh, nh);
