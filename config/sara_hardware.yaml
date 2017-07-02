@@ -3,16 +3,16 @@ robot_hardware:
   - sara_front_right_base_motor
   - sara_rear_left_base_motor
   - sara_rear_right_base_motor
-#  - sara_right_shoulder_roll_joint
-#  - sara_right_shoulder_pitch_joint
-#  - sara_right_shoulder_yaw_joint
-#  - sara_right_elbow_pitch_joint
-#  - sara_right_elbow_yaw_joint
-#  - sara_right_wrist_pitch_joint
-#  - sara_right_wrist_roll_joint
-#  - sara_head_pitch_dynamixel
-#  - sara_head_yaw_dynamixel
-#  - sara_robotiq_hardware_interface
+  - sara_right_shoulder_roll_joint
+  - sara_right_shoulder_pitch_joint
+  - sara_right_shoulder_yaw_joint
+  - sara_right_elbow_pitch_joint
+  - sara_right_elbow_yaw_joint
+  - sara_right_wrist_pitch_joint
+  - sara_right_wrist_roll_joint
+  - sara_head_pitch_dynamixel
+  - sara_head_yaw_dynamixel
+  - sara_robotiq_hardware_interface
 
 
 #--<< WHEELS >>--
@@ -81,20 +81,16 @@ sara_right_elbow_yaw_joint:
     - right_elbow_yaw_joint
 
 sara_right_wrist_pitch_joint:
-  type: wm_kinova_hardware_interface/WMKinovaHardwareInterface # Temporary definition. Do not let it this way!
-#  type: wm_dynamixel_hardware_interface/WMDynamixelHardwareInterface # This one is the right one
-  index: 5
-  offset: 0.0
+  type: wm_dynamixel_hardware_interface/WMDynamixelHardwareInterface
   joints:
     - right_wrist_pitch_joint
+  id: 1
 
 sara_right_wrist_roll_joint:
-  type: wm_kinova_hardware_interface/WMKinovaHardwareInterface # Temporary definition. Do not let it this way!
-#  type: wm_dynamixel_hardware_interface/WMDynamixelHardwareInterface # This one is the right one
-  index: 5
-  offset: 0.0
+  type: wm_dynamixel_hardware_interface/WMDynamixelHardwareInterface
   joints:
     - right_wrist_roll_joint
+  id: 2
 
 
 #<< GRIPPER >>
