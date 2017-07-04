@@ -85,13 +85,14 @@ sara_right_wrist_pitch_joint:
   joints:
     - right_wrist_pitch_joint
   id: 2
+  offset: 1.5677283652191252
 
 sara_right_wrist_roll_joint:
   type: wm_dynamixel_hardware_interface/WMDynamixelHardwareInterface
   joints:
     - right_wrist_roll_joint
   id: 1
-
+  offset: 0.868233125943273
 
 #<< GRIPPER >>
 sara_robotiq_hardware_interface:
