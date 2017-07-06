@@ -10,8 +10,8 @@ robot_hardware:
   - sara_right_elbow_yaw_joint
   - sara_right_wrist_pitch_joint
   - sara_right_wrist_roll_joint
-#  - sara_head_pitch_dynamixel
-#  - sara_head_yaw_dynamixel
+  - sara_head_pitch_dynamixel
+  - sara_head_yaw_dynamixel
   - sara_robotiq_hardware_interface
 
 
@@ -85,14 +85,16 @@ sara_right_wrist_pitch_joint:
   joints:
     - right_wrist_pitch_joint
   id: 2
-  offset: 1.5677283652191252
+  offset: 0
+  direction: -1
 
 sara_right_wrist_roll_joint:
   type: wm_dynamixel_hardware_interface/WMDynamixelHardwareInterface
   joints:
     - right_wrist_roll_joint
   id: 1
-  offset: 0.868233125943273
+  offset: 0
+  direction: 1
 
 #<< GRIPPER >>
 sara_robotiq_hardware_interface:
@@ -103,13 +105,17 @@ sara_robotiq_hardware_interface:
 
 #--<< HEAD >>--
 sara_head_pitch_dynamixel:
-  type: wm_dynamixel_hardware_interface/WMDynamixelHardwareInterface
+  type: wm_kinova_hardware_interface/WMKinovaHardwareInterface
+  index: 6
+  offset: 0
   joints:
     - head_pitch_joint
-  id: 3
+
 
 sara_head_yaw_dynamixel:
-  type: wm_dynamixel_hardware_interface/WMDynamixelHardwareInterface
+  type: wm_kinova_hardware_interface/WMKinovaHardwareInterface
+  index: 6
+  offset: 0
   joints:
     - head_yaw_joint
-  id: 4
+
