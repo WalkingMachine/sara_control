@@ -42,7 +42,7 @@ sara_rear_right_base_motor:
   feedback_topic: drive3/feedback3
   cmd_topic: drive3/cmd3
   joints:
-    - rear_left_mecanum_wheel_joint
+    - rear_right_mecanum_wheel_joint
 
 #--<< ARM >>--
 sara_right_shoulder_roll_joint:
@@ -87,6 +87,7 @@ sara_right_wrist_pitch_joint:
   id: 2
   offset: 0
   direction: -1
+  simulation: true
 
 sara_right_wrist_roll_joint:
   type: wm_dynamixel_hardware_interface/WMDynamixelHardwareInterface
@@ -95,12 +96,13 @@ sara_right_wrist_roll_joint:
   id: 1
   offset: 0
   direction: 1
+  simulation: true
 
 #<< GRIPPER >>
 sara_robotiq_hardware_interface:
   type: wm_robotiq_hardware_interface/WMRobotiqHardwareInterface
   joints:
-    - right_robotiq_85_left_knuckle_joint
+    - right_inner_knuckle_joint
 
 
 #--<< HEAD >>--
