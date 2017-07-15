@@ -1,0 +1,123 @@
+robot_hardware:
+  - sara_front_left_base_motor
+  - sara_front_right_base_motor
+  - sara_rear_left_base_motor
+  - sara_rear_right_base_motor
+  - sara_right_shoulder_roll_joint
+  - sara_right_shoulder_pitch_joint
+  - sara_right_shoulder_yaw_joint
+  - sara_right_elbow_pitch_joint
+  - sara_right_elbow_yaw_joint
+  - sara_right_wrist_pitch_joint
+  - sara_right_wrist_roll_joint
+  - sara_head_pitch_dynamixel
+  - sara_head_yaw_dynamixel
+  - sara_robotiq_hardware_interface
+
+
+#--<< WHEELS >>--
+sara_front_left_base_motor:
+  type: wm_roboteq_hardware_interface/WMRoboteqHardwareInterface
+  feedback_topic: drive0/feedback0
+  cmd_topic: drive0/cmd0
+  joints:
+    - front_left_mecanum_wheel_joint
+
+sara_front_right_base_motor:
+  type: wm_roboteq_hardware_interface/WMRoboteqHardwareInterface
+  feedback_topic: drive1/feedback1
+  cmd_topic: drive1/cmd1
+  joints:
+    - front_right_mecanum_wheel_joint
+
+sara_rear_left_base_motor:
+  type: wm_roboteq_hardware_interface/WMRoboteqHardwareInterface
+  feedback_topic: drive2/feedback2
+  cmd_topic: drive2/cmd2
+  joints:
+    - rear_left_mecanum_wheel_joint
+
+sara_rear_right_base_motor:
+  type: wm_roboteq_hardware_interface/WMRoboteqHardwareInterface
+  feedback_topic: drive3/feedback3
+  cmd_topic: drive3/cmd3
+  joints:
+    - rear_right_mecanum_wheel_joint
+
+#--<< ARM >>--
+sara_right_shoulder_roll_joint:
+  type: wm_kinova_hardware_interface/WMKinovaHardwareInterface
+  index: 0
+  offset: 5.238630596444606
+  joints:
+    - right_shoulder_roll_joint
+
+sara_right_shoulder_pitch_joint:
+  type: wm_kinova_hardware_interface/WMKinovaHardwareInterface
+  index: 1
+  offset: 3.136681340526342
+  joints:
+    - right_shoulder_pitch_joint
+
+sara_right_shoulder_yaw_joint:
+  type: wm_kinova_hardware_interface/WMKinovaHardwareInterface
+  index: 2
+  offset: 1.2685709858754277
+  joints:
+    - right_shoulder_yaw_joint
+
+sara_right_elbow_pitch_joint:
+  type: wm_kinova_hardware_interface/WMKinovaHardwareInterface
+  index: 3
+  offset: 4.522773000748157
+  joints:
+    - right_elbow_pitch_joint
+
+sara_right_elbow_yaw_joint:
+  type: wm_kinova_hardware_interface/WMKinovaHardwareInterface
+  index: 4
+  offset: 4.763554975575208
+  joints:
+    - right_elbow_yaw_joint
+
+sara_right_wrist_pitch_joint:
+  type: wm_dynamixel_hardware_interface/WMDynamixelHardwareInterface
+  joints:
+    - right_wrist_pitch_joint
+  id: 2
+  offset: 0
+  direction: -1
+  simulation: true
+
+sara_right_wrist_roll_joint:
+  type: wm_dynamixel_hardware_interface/WMDynamixelHardwareInterface
+  joints:
+    - right_wrist_roll_joint
+  id: 1
+  offset: 0
+  direction: 1
+  simulation: true
+
+#<< GRIPPER >>
+sara_robotiq_hardware_interface:
+  type: wm_robotiq_hardware_interface/WMRobotiqHardwareInterface
+  joints:
+    - right_inner_knuckle_joint
+
+
+#--<< HEAD >>--
+sara_head_pitch_dynamixel:
+  type: wm_kinova_hardware_interface/WMKinovaHardwareInterface
+  index: 6
+  offset: 0
+  joints:
+    - head_pitch_joint
+
+
+sara_head_yaw_dynamixel:
+  type: wm_kinova_hardware_interface/WMKinovaHardwareInterface
+  index: 6
+  offset: 0
+  joints:
+    - head_yaw_joint
+
