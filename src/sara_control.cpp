@@ -4,18 +4,30 @@
 #include <ros/ros.h>
 #include <controller_manager/controller_manager.h>
 #include <combined_robot_hw/combined_robot_hw.h>
+#include <realtime_tools/realtime_publisher.h>
 
+
+bool ESTOP;
+
+bool callback(std_srvs::SetBool::Request& request, std_srvs::SetBool::Response& response)
+{
+  ESTOP = request.data;
+  reponse.success = true;
+  return true;
+}
 
 int main(int argc, char **argv)
 {
-  bool ESTOP;
-
   ros::init(argc, argv, "sara_control");
   ros::NodeHandle nh;
 
+  ros::ServiceServer status_service = nh.advertiseService("estop_service", callback);
+
+  realtime_tools::RealtimePublisher rt_pub = realtime_tools::RealtimePublisher<std_msgs::Bool>(nh, "estop_status", 4);
+
   ros::AsyncSpinner spinner(1);
   spinner.start();
-    
+
   combined_robot_hw::CombinedRobotHW chw;
 
   chw.init(nh, nh);
@@ -27,10 +39,15 @@ int main(int argc, char **argv)
   while (ros::ok())
   {
     chw.read(ros::Time::now(), period);
-    //cm.update(ros::Time::now(), period, true);
-    cm.update(ros::Time::now(), period, false);
+    cm.update(ros::Time::now(), period, !ESTOP);
     chw.write(ros::Time::now(), period);
+    if(rt_pub->trylock())
+    {
+      realtime_pub->msg_ = ESTOP;
+      realtime_pub->unlockAndPublish();
+    }
     period.sleep();
   }
+  
   return 0;
 }
