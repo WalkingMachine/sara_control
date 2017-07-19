@@ -101,7 +101,7 @@ sara_right_wrist_roll_joint:
 sara_robotiq_hardware_interface:
   type: wm_robotiq_hardware_interface/WMRobotiqHardwareInterface
   joints:
-    - right_inner_knuckle_joint
+    - right_finger_joint
 
 
 #--<< HEAD >>--
@@ -119,4 +119,3 @@ sara_head_yaw_dynamixel:
   offset: 0
   joints:
     - head_yaw_joint
-
