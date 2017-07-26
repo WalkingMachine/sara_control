@@ -8,7 +8,6 @@ find_package(catkin REQUIRED COMPONENTS
         roscpp
         controller_manager
         combined_robot_hw
-        realtime_tools
         )
 
 ## System dependencies are found with CMake's conventions

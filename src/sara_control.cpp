@@ -4,9 +4,6 @@
 #include <ros/ros.h>
 #include <controller_manager/controller_manager.h>
 #include <combined_robot_hw/combined_robot_hw.h>
-#include <realtime_tools/realtime_publisher.h>
-#include <std_srvs/SetBool.h>
-#include <std_msgs/Bool.h>
 
 int main(int argc, char **argv) {
     ros::init(argc, argv, "sara_control");

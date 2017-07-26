@@ -47,9 +47,6 @@
   <build_depend>controller_manager</build_depend>
   <build_depend>roscpp</build_depend>
 
-  <run_depend>realtime_tools</run_depend>
-  <build_depend>realtime_tools</build_depend>
-
   <buildtool_depend>catkin</buildtool_depend>
   
 
