@@ -1,8 +1,8 @@
 robot_hardware:
-  - sara_front_left_base_joint
-  - sara_front_right_base_joint
-  - sara_rear_left_base_joint
-  - sara_rear_right_base_joint
+#  - sara_front_left_base_joint
+#  - sara_front_right_base_joint
+#  - sara_rear_left_base_joint
+#  - sara_rear_right_base_joint
   - sara_right_shoulder_roll_joint
   - sara_right_shoulder_pitch_joint
   - sara_right_shoulder_yaw_joint
@@ -11,7 +11,7 @@ robot_hardware:
   - sara_right_wrist_pitch_joint
   - sara_right_wrist_roll_joint
   - sara_head_pitch_dynamixel
-  - sara_head_yaw_dynamixel
+#  - sara_head_yaw_dynamixel
   - sara_robotiq_hardware_interface
 
 #--<< WHEELS >>--
