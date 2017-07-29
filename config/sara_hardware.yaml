@@ -68,14 +68,14 @@ sara_right_shoulder_yaw_joint:
 sara_right_elbow_pitch_joint:
   type: wm_kinova_hardware_interface/WMKinovaHardwareInterface
   index: 3
-  offset: 4.522773000748157
+  offset: 2.951978001
   joints:
     - right_elbow_pitch_joint
 
 sara_right_elbow_yaw_joint:
   type: wm_kinova_hardware_interface/WMKinovaHardwareInterface
   index: 4
-  offset: 4.763554975575208
+  offset: -1.51963033168  # to check. The hardware seems to randomly switch angle by +- 2*pi
   joints:
     - right_elbow_yaw_joint
 
@@ -84,18 +84,18 @@ sara_right_wrist_pitch_joint:
   joints:
     - right_wrist_pitch_joint
   id: 2
-  offset: 0
-  direction: -1
-  simulation: true
+  offset: 3.14159
+  direction: 1
+  simulation: false
 
 sara_right_wrist_roll_joint:
   type: wm_dynamixel_hardware_interface/WMDynamixelHardwareInterface
   joints:
     - right_wrist_roll_joint
   id: 1
-  offset: 0
-  direction: 1
-  simulation: true
+  offset: -3.14159
+  direction: -1
+  simulation: false
 
 #<< GRIPPER >>
 sara_robotiq_hardware_interface:
