@@ -9,8 +9,8 @@
   <node name="sara_control" pkg="sara_control" type="sara_control" output="screen"/>
 
   <!--    start the hardwares nodes   -->
-  <!-- <include file="$(find robotiq_85_driver)/launch/robotiq_85_driver.launch"/>-->
-  <!-- <include file="$(find wm_dynamixel_node)/launch/wm_dynamixel_node.launch"/>-->
+  <include file="$(find robotiq_85_driver)/launch/robotiq_85_driver.launch"/>
+  <include file="$(find wm_dynamixel_node)/launch/wm_dynamixel_node.launch"/>
   <include file="$(find roboteq_driver)/launch/driveUltime.launch"/>
 
 </launch>
