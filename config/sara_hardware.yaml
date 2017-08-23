@@ -75,7 +75,7 @@ sara_right_elbow_pitch_joint:
 sara_right_elbow_yaw_joint:
   type: wm_kinova_hardware_interface/WMKinovaHardwareInterface
   index: 4
-  offset: 4.763554975575208
+  offset: 4.763549668  # TO CHECK #  The hardware seems to randomly switch angle by +- pi  use -1.51963033168  or -4.661220332
   joints:
     - right_elbow_yaw_joint
 
