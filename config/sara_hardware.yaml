@@ -11,7 +11,7 @@ robot_hardware:
   - sara_right_wrist_pitch_joint
   - sara_right_wrist_roll_joint
   - sara_head_pitch_dynamixel
-#  - sara_head_yaw_dynamixel
+  - sara_head_yaw_dynamixel
   - sara_robotiq_hardware_interface
 
 #--<< WHEELS >>--
@@ -68,14 +68,14 @@ sara_right_shoulder_yaw_joint:
 sara_right_elbow_pitch_joint:
   type: wm_kinova_hardware_interface/WMKinovaHardwareInterface
   index: 3
-  offset: 4.522773000748157
+  offset: 2.951978001
   joints:
     - right_elbow_pitch_joint
 
 sara_right_elbow_yaw_joint:
   type: wm_kinova_hardware_interface/WMKinovaHardwareInterface
   index: 4
-  offset: 4.763549668  # TO CHECK #  The hardware seems to randomly switch angle by +- pi  use -1.51963033168  or -4.661220332
+  offset: 4.661220332  # TO CHECK #  The hardware seems to randomly switch angle by +- pi  use -1.51963033168  or 4.661220332
   joints:
     - right_elbow_yaw_joint
 
@@ -84,18 +84,20 @@ sara_right_wrist_pitch_joint:
   joints:
     - right_wrist_pitch_joint
   id: 2
-  offset: 0
-  direction: -1
-  simulation: true
+  offset: 3.14159
+  direction: 1
+  simulation: false
+  resolution: 4096
 
 sara_right_wrist_roll_joint:
   type: wm_dynamixel_hardware_interface/WMDynamixelHardwareInterface
   joints:
     - right_wrist_roll_joint
   id: 1
-  offset: 0
-  direction: 1
-  simulation: true
+  offset: -3.14159  # TO CHECK #  The hardware seems to randomly switch angle by +- pi  use -3.14159  or 3.14159
+  direction: -1
+  simulation: false
+  resolution: 4096
 
 #<< GRIPPER >>
 sara_robotiq_hardware_interface:
@@ -106,14 +108,17 @@ sara_robotiq_hardware_interface:
 
 #--<< HEAD >>--
 sara_head_pitch_dynamixel:
-  type: wm_kinova_hardware_interface/WMKinovaHardwareInterface
-  index: 6
-  offset: 0
+  type: wm_dynamixel_hardware_interface/WMDynamixelHardwareInterface
   joints:
     - head_pitch_joint
+  id: 4 # TODO
+  offset: -0.8344855486097889
+  direction: -1
+  simulation: false
+  resolution: 4096
 
 
-sara_head_yaw_dynamixel:
+sara_head_yaw_dynamixel: # TODO
   type: wm_kinova_hardware_interface/WMKinovaHardwareInterface
   index: 6
   offset: 0
