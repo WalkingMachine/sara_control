@@ -1,8 +1,8 @@
 robot_hardware:
-#  - sara_front_left_base_joint
-#  - sara_front_right_base_joint
-#  - sara_rear_left_base_joint
-#  - sara_rear_right_base_joint
+  - sara_front_left_base_joint
+  - sara_front_right_base_joint
+  - sara_rear_left_base_joint
+  - sara_rear_right_base_joint
   - sara_right_shoulder_roll_joint
   - sara_right_shoulder_pitch_joint
   - sara_right_shoulder_yaw_joint
@@ -111,16 +111,19 @@ sara_head_pitch_dynamixel:
   type: wm_dynamixel_hardware_interface/WMDynamixelHardwareInterface
   joints:
     - head_pitch_joint
-  id: 4 # TODO
+  id: 4
   offset: -0.8344855486097889
   direction: -1
   simulation: false
   resolution: 4096
 
 
-sara_head_yaw_dynamixel: # TODO
-  type: wm_kinova_hardware_interface/WMKinovaHardwareInterface
-  index: 6
-  offset: 0
+sara_head_yaw_dynamixel:
+  type: wm_dynamixel_hardware_interface/WMDynamixelHardwareInterface
   joints:
     - head_yaw_joint
+  id: 3
+  offset: 3.14159
+  direction: -1
+  simulation: false
+  resolution: 4096
