@@ -1,8 +1,8 @@
 robot_hardware:
-  - sara_front_left_base_joint
-  - sara_front_right_base_joint
-  - sara_rear_left_base_joint
-  - sara_rear_right_base_joint
+#  - sara_front_left_base_joint
+#  - sara_front_right_base_joint
+#  - sara_rear_left_base_joint
+#  - sara_rear_right_base_joint
   - sara_right_shoulder_roll_joint
   - sara_right_shoulder_pitch_joint
   - sara_right_shoulder_yaw_joint
@@ -47,35 +47,35 @@ sara_rear_right_base_joint:
 sara_right_shoulder_roll_joint:
   type: wm_kinova_hardware_interface/WMKinovaHardwareInterface
   index: 0
-  offset: 5.238630596444606
+  offset: -1.0982744426
   joints:
     - right_shoulder_roll_joint
 
 sara_right_shoulder_pitch_joint:
   type: wm_kinova_hardware_interface/WMKinovaHardwareInterface
   index: 1
-  offset: 3.136681340526342
+  offset: 3.134581695
   joints:
     - right_shoulder_pitch_joint
 
 sara_right_shoulder_yaw_joint:
   type: wm_kinova_hardware_interface/WMKinovaHardwareInterface
   index: 2
-  offset: 1.2685709858754277
+  offset: 1.3402233974
   joints:
     - right_shoulder_yaw_joint
 
 sara_right_elbow_pitch_joint:
   type: wm_kinova_hardware_interface/WMKinovaHardwareInterface
   index: 3
-  offset: 2.951978001
+  offset: 2.9622500387
   joints:
     - right_elbow_pitch_joint
 
 sara_right_elbow_yaw_joint:
   type: wm_kinova_hardware_interface/WMKinovaHardwareInterface
   index: 4
-  offset: 4.661220332  # TO CHECK #  The hardware seems to randomly switch angle by +- pi  use -1.51963033168  or 4.661220332
+  offset: -1.582381552
   joints:
     - right_elbow_yaw_joint
 
@@ -94,7 +94,7 @@ sara_right_wrist_roll_joint:
   joints:
     - right_wrist_roll_joint
   id: 1
-  offset: 3.14159  # TO CHECK #  The hardware seems to randomly switch angle by +- pi  use -3.14159  or 3.14159
+  offset: 0.523598776
   direction: -1
   simulation: false
   resolution: 4096
@@ -112,11 +112,11 @@ sara_head_pitch_dynamixel:
   joints:
     - head_pitch_joint
   id: 4
-  offset: 3.37805617
+  offset: 3.56196842
   direction: -1
   simulation: false
   resolution: 1023
-  ratio: 0.348400909
+  ratio: 0.385165663
   max_speed: 80
   mode: 1 # position mode
 
