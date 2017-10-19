@@ -84,7 +84,7 @@ sara_right_wrist_pitch_joint:
   joints:
     - right_wrist_pitch_joint
   id: 2
-  offset: 3.14159
+  offset: 3.279650924
   direction: 1
   simulation: false
   resolution: 4096
