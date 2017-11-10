@@ -1,8 +1,8 @@
 robot_hardware:
-#  - sara_front_left_base_joint
-#  - sara_front_right_base_joint
-#  - sara_rear_left_base_joint
-#  - sara_rear_right_base_joint
+  - sara_front_left_base_joint
+  - sara_front_right_base_joint
+  - sara_rear_left_base_joint
+  - sara_rear_right_base_joint
   - sara_right_shoulder_roll_joint
   - sara_right_shoulder_pitch_joint
   - sara_right_shoulder_yaw_joint
@@ -18,28 +18,28 @@ robot_hardware:
 sara_front_left_base_joint:
   type: wm_roboteq_hardware_interface/WMRoboteqHardwareInterface
   feedback_topic: drive0/feedback0
-  cmd_topic: drive0/cmd0
+  cmd_topic: dump # drive0/cmd0
   joints:
     - front_left_mecanum_wheel_joint
 
 sara_front_right_base_joint:
   type: wm_roboteq_hardware_interface/WMRoboteqHardwareInterface
   feedback_topic: drive1/feedback1
-  cmd_topic: drive1/cmd1
+  cmd_topic: dump # drive1/cmd1
   joints:
     - front_right_mecanum_wheel_joint
 
 sara_rear_left_base_joint:
   type: wm_roboteq_hardware_interface/WMRoboteqHardwareInterface
   feedback_topic: drive2/feedback2
-  cmd_topic: drive2/cmd2
+  cmd_topic: dump # drive2/cmd2
   joints:
     - rear_left_mecanum_wheel_joint
 
 sara_rear_right_base_joint:
   type: wm_roboteq_hardware_interface/WMRoboteqHardwareInterface
   feedback_topic: drive3/feedback3
-  cmd_topic: drive3/cmd3
+  cmd_topic: dump # drive3/cmd3
   joints:
     - rear_right_mecanum_wheel_joint
 
@@ -75,7 +75,7 @@ sara_right_elbow_pitch_joint:
 sara_right_elbow_yaw_joint:
   type: wm_kinova_hardware_interface/WMKinovaHardwareInterface
   index: 4
-  offset: -1.582381552
+  offset: 0.0178266574318364
   joints:
     - right_elbow_yaw_joint
 
