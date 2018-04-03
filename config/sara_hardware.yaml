@@ -48,6 +48,12 @@ sara_right_shoulder_roll_joint:
   type: wm_kinova_hardware_interface/WMKinovaHardwareInterface
   index: 0
   offset: -1.095618064
+  speed_ratio: 1
+  complience_level: 2
+  complience_threshold: 12
+  complience_derivation_factor: 0.03
+  complience_loss_factor: 0.75
+  complience_resistance: 0.2
   joints:
     - right_shoulder_roll_joint
 
@@ -55,6 +61,12 @@ sara_right_shoulder_pitch_joint:
   type: wm_kinova_hardware_interface/WMKinovaHardwareInterface
   index: 1
   offset: 3.088521263
+  speed_ratio: 1
+  complience_level: 2
+  complience_threshold: 12
+  complience_derivation_factor: 0.03
+  complience_loss_factor: 0.75
+  complience_resistance: 0.2
   joints:
     - right_shoulder_pitch_joint
 
@@ -62,6 +74,12 @@ sara_right_shoulder_yaw_joint:
   type: wm_kinova_hardware_interface/WMKinovaHardwareInterface
   index: 2
   offset: 1.360509039
+  speed_ratio: 1
+  complience_level: 2
+  complience_threshold: 3
+  complience_derivation_factor: 0.02
+  complience_loss_factor: 0.75
+  complience_resistance: 0.1
   joints:
     - right_shoulder_yaw_joint
 
@@ -69,13 +87,25 @@ sara_right_elbow_pitch_joint:
   type: wm_kinova_hardware_interface/WMKinovaHardwareInterface
   index: 3
   offset: 2.972071485
+  speed_ratio: 2
+  complience_level: 2
+  complience_threshold: 3
+  complience_derivation_factor: 0.02
+  complience_loss_factor: 0.9
+  complience_resistance: 0.1
   joints:
     - right_elbow_pitch_joint
 
 sara_right_elbow_yaw_joint:
   type: wm_kinova_hardware_interface/WMKinovaHardwareInterface
   index: 4
-  offset: 0.0042379215
+  offset: -2.08403499
+  speed_ratio: 4
+  complience_level: 2
+  complience_threshold: 2
+  complience_derivation_factor: 0.01
+  complience_loss_factor: 0.96
+  complience_resistance: 0.05
   joints:
     - right_elbow_yaw_joint
 
@@ -85,7 +115,7 @@ sara_right_wrist_pitch_joint:
     - right_wrist_pitch_joint
   id: 2
   offset: 3.143126634
-  direction: 1
+  direction: -1
   simulation: false
   resolution: 4096
 
@@ -94,8 +124,8 @@ sara_right_wrist_roll_joint:
   joints:
     - right_wrist_roll_joint
   id: 1
-  offset: 0.5685955462
-  direction: -1
+  offset: -0.015339808
+  direction: 1
   simulation: false
   resolution: 4096
 
@@ -117,7 +147,7 @@ sara_head_pitch_dynamixel:
   simulation: false
   resolution: 1023
   ratio: 0.385165663
-  max_speed: 80
+  max_speed: 20
   mode: 1 # position mode
 
 
@@ -126,9 +156,10 @@ sara_head_yaw_dynamixel:
   joints:
     - head_yaw_joint
   id: 3
-  offset: 3.14159
+  offset: -3.27
   direction: -1
-  simulation: true # WARNING! SIMULATION MODE ACTIVATED!
-  resolution: 1023
-  max_speed: 80
+  simulation: false
+  resolution: 4096
+  ratio: 1
+  max_speed: 20
   mode: 1 # position mode
