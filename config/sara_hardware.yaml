@@ -115,7 +115,7 @@ sara_right_wrist_pitch_joint:
     - right_wrist_pitch_joint
   id: 2
   offset: 3.143126634
-  direction: -1
+  direction: 1
   simulation: false
   resolution: 4096
 
@@ -124,8 +124,8 @@ sara_right_wrist_roll_joint:
   joints:
     - right_wrist_roll_joint
   id: 1
-  offset: -0.015339808
-  direction: 1
+  offset: -0.215339808
+  direction: -1
   simulation: false
   resolution: 4096
 
@@ -147,7 +147,7 @@ sara_head_pitch_dynamixel:
   simulation: false
   resolution: 1023
   ratio: 0.355
-  max_speed: 20
+  max_speed: 25
   mode: 1 # position mode
 
 
