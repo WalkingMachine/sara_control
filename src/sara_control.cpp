@@ -28,5 +28,6 @@ int main(int argc, char **argv) {
         chw.write(ros::Time::now(), period);
         period.sleep();
     }
+    spinner.stop();
     return 0;
 }
