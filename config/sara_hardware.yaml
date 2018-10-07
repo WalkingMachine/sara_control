@@ -143,11 +143,11 @@ sara_head_pitch_dynamixel:
     - head_pitch_joint
   id: 4
   offset: 3.2
-  direction: -1
+  direction: 1
   simulation: false
   resolution: 1023
-  ratio: 0.355
-  max_speed: 25
+  ratio: -0.355
+  max_speed: 50
   mode: 1 # position mode
 
 
@@ -161,5 +161,5 @@ sara_head_yaw_dynamixel:
   simulation: false
   resolution: 4096
   ratio: 1
-  max_speed: 20
+  max_speed: 50
   mode: 1 # position mode
