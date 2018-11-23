@@ -99,7 +99,7 @@ sara_right_elbow_pitch_joint:
 sara_right_elbow_yaw_joint:
   type: wm_kinova_hardware_interface/WMKinovaHardwareInterface
   index: 4
-  offset: -2.08403499
+  offset: 0.009501211
   speed_ratio: 4
   complience_level: 2
   complience_threshold: 2
