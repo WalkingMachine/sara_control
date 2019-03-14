@@ -17,6 +17,7 @@ int main(int argc, char **argv) {
     combined_robot_hw::CombinedRobotHW chw;
 
     chw.init(nh, nh);
+    ROS_INFO("ALL HARDWARE INTERFACES LOADED PROPERLY");
 
     controller_manager::ControllerManager cm(&chw, nh);
 
