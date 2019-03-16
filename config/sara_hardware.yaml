@@ -13,6 +13,7 @@ robot_hardware:
   - sara_head_pitch_dynamixel
   - sara_head_yaw_dynamixel
   - sara_robotiq_hardware_interface
+  - base_actuator_joint
 
 #--<< WHEELS >>--
 sara_front_left_base_joint:
@@ -160,5 +161,21 @@ sara_head_pitch_dynamixel:
   simulation: false
   resolution: 4096
   ratio: 0.4637
+  max_speed: 20
+  mode: 0 # position mode
 
 
+#--<< COLUMN >>--
+base_actuator_joint:
+ type: wm_lifting_column_hardware_interface/WMLiftingColumnHardwareInterface
+ joints:
+  - base_actuator_joint
+ cmd_max: 255
+ speed_max_up: 0.0279503106
+ speed_min_up: 0.0093243243
+ speed_max_down: 0.02958988
+ speed_min_down: 0.010952381
+ max_height: 0.69
+ resolution: 2387
+ cmd_topic: "column/cmd"
+ position_topic: "column/position"
