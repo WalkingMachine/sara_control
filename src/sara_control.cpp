@@ -7,6 +7,8 @@
 
 #include "WMAdmitance/WMAdmitance.h"
 
+using namespace wm_admitance;
+
 int main(int argc, char **argv) {
     ros::init(argc, argv, "sara_control");
     ros::NodeHandle nh;
@@ -22,7 +24,7 @@ int main(int argc, char **argv) {
 
     controller_manager::ControllerManager cm(&chw, nh);
 
-    wm_admitance::WMAdmitance lAdmitance(nh);
+    WMAdmitance* lAdmitance = WMAdmitance::getInstance();
 
     ros::Duration period(0.02);  // 50 Hz
 
@@ -30,7 +32,7 @@ int main(int argc, char **argv) {
         chw.read(ros::Time::now(), period);
         cm.update(ros::Time::now(), period);
 
-        lAdmitance.process();
+        lAdmitance->process();
 
         chw.write(ros::Time::now(), period);
         period.sleep();
