@@ -5,9 +5,9 @@
 #include <controller_manager/controller_manager.h>
 #include <combined_robot_hw/combined_robot_hw.h>
 
-#include "WMAdmitance/WMAdmitance.h"
+#include "WMAdmittance/WMAdmittance.h"
 
-using namespace wm_admitance;
+using namespace wm_admittance;
 
 int main(int argc, char **argv) {
     ros::init(argc, argv, "sara_control");
@@ -24,7 +24,7 @@ int main(int argc, char **argv) {
 
     controller_manager::ControllerManager cm(&chw, nh);
 
-    WMAdmitance* lAdmitance = WMAdmitance::getInstance();
+    WMAdmittance* lAdmittance = WMAdmittance::getInstance();
 
     ros::Duration period(0.02);  // 50 Hz
 
@@ -32,7 +32,7 @@ int main(int argc, char **argv) {
         chw.read(ros::Time::now(), period);
         cm.update(ros::Time::now(), period);
 
-        lAdmitance->process();
+        lAdmittance->process();
 
         chw.write(ros::Time::now(), period);
         period.sleep();

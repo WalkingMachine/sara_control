@@ -47,8 +47,8 @@
   <build_depend>controller_manager</build_depend>
   <build_depend>roscpp</build_depend>
 
-  <build_depend>wm_admitance</build_depend>
-  <run_depend>wm_admitance</run_depend>
+  <build_depend>wm_admittance</build_depend>
+  <run_depend>wm_admittance</run_depend>
 
   <buildtool_depend>catkin</buildtool_depend>
   
