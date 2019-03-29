@@ -100,7 +100,7 @@ sara_right_elbow_pitch_joint:
 sara_right_elbow_yaw_joint:
   type: wm_kinova_hardware_interface/WMKinovaHardwareInterface
   index: 4
-  offset: 0.009501211
+  offset: -1.561295116
   speed_ratio: 4
   complience_level: 2
   complience_threshold: 2
@@ -114,18 +114,19 @@ sara_right_wrist_pitch_joint:
   type: wm_dynamixel_hardware_interface/WMDynamixelHardwareInterface
   joints:
     - right_wrist_pitch_joint
-  id: 2
-  offset: 3.143126634
-  direction: 1
+  id: 1
+  offset: 3.141592654
+  direction: -1
   simulation: false
   resolution: 4096
+  ratio: 0.5
 
 sara_right_wrist_roll_joint:
   type: wm_dynamixel_hardware_interface/WMDynamixelHardwareInterface
   joints:
     - right_wrist_roll_joint
-  id: 1
-  offset: -0.215339808
+  id: 2
+  offset: 3.141592654
   direction: -1
   simulation: false
   resolution: 4096
