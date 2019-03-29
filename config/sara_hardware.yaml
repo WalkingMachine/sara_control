@@ -13,6 +13,7 @@ robot_hardware:
   - sara_head_pitch_dynamixel
   - sara_head_yaw_dynamixel
   - sara_robotiq_hardware_interface
+  - base_actuator_joint
 
 #--<< WHEELS >>--
 sara_front_left_base_joint:
@@ -99,7 +100,7 @@ sara_right_elbow_pitch_joint:
 sara_right_elbow_yaw_joint:
   type: wm_kinova_hardware_interface/WMKinovaHardwareInterface
   index: 4
-  offset: -2.08403499
+  offset: -1.561295116
   speed_ratio: 4
   complience_level: 2
   complience_threshold: 2
@@ -113,18 +114,19 @@ sara_right_wrist_pitch_joint:
   type: wm_dynamixel_hardware_interface/WMDynamixelHardwareInterface
   joints:
     - right_wrist_pitch_joint
-  id: 2
-  offset: 3.143126634
-  direction: 1
+  id: 1
+  offset: 3.141592654
+  direction: -1
   simulation: false
   resolution: 4096
+  ratio: 0.5
 
 sara_right_wrist_roll_joint:
   type: wm_dynamixel_hardware_interface/WMDynamixelHardwareInterface
   joints:
     - right_wrist_roll_joint
-  id: 1
-  offset: -0.215339808
+  id: 2
+  offset: 3.141592654
   direction: -1
   simulation: false
   resolution: 4096
@@ -137,29 +139,44 @@ sara_robotiq_hardware_interface:
 
 
 #--<< HEAD >>--
-sara_head_pitch_dynamixel:
-  type: wm_dynamixel_hardware_interface/WMDynamixelHardwareInterface
-  joints:
-    - head_pitch_joint
-  id: 4
-  offset: 3.2
-  direction: -1
-  simulation: false
-  resolution: 1023
-  ratio: 0.355
-  max_speed: 25
-  mode: 1 # position mode
-
-
 sara_head_yaw_dynamixel:
   type: wm_dynamixel_hardware_interface/WMDynamixelHardwareInterface
   joints:
     - head_yaw_joint
   id: 3
-  offset: -3.27
+  offset: 3.141592654
+  direction: -1
+  simulation: false
+  resolution: 1023
+  max_speed: 50
+  ratio: 1
+  mode: 1
+
+sara_head_pitch_dynamixel:
+  type: wm_dynamixel_hardware_interface/WMDynamixelHardwareInterface
+  joints:
+    - head_pitch_joint
+  id: 4
+  offset: 3.041592654 # "+" = down, "-" = up
   direction: -1
   simulation: false
   resolution: 4096
-  ratio: 1
+  ratio: 0.4637
   max_speed: 20
-  mode: 1 # position mode
+  mode: 0 # position mode
+
+
+#--<< COLUMN >>--
+base_actuator_joint:
+ type: wm_lifting_column_hardware_interface/WMLiftingColumnHardwareInterface
+ joints:
+  - base_actuator_joint
+ cmd_max: 255
+ speed_max_up: 0.0279503106
+ speed_min_up: 0.0093243243
+ speed_max_down: 0.02958988
+ speed_min_down: 0.010952381
+ max_height: 0.69
+ resolution: 2387
+ cmd_topic: "column/cmd"
+ position_topic: "column/position"
