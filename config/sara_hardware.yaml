@@ -127,7 +127,7 @@ sara_right_wrist_roll_joint:
     - right_wrist_roll_joint
   id: 2
   offset: 3.141592654
-  direction: -1
+  direction: 1
   simulation: false
   resolution: 4096
 
