@@ -19,7 +19,11 @@ git clone <https://github.com/WalkingMachine/wm_dynamixel>
 git clone <https://github.com/WalkingMachine/dynamixel_control_hw>
 ```
 
-# Pour lancer
+# Pour lancer(mode réel)
 ```bash
 rosslaunch sara_control sara_hardware.launch
+```
+# Pour lancer(mode "simulé")
+```bash
+rosslaunch sara_control sara_fake_hardware.launch
 ```
