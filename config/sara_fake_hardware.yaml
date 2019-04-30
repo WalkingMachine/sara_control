@@ -1,0 +1,99 @@
+robot_hardware:
+  - sara_front_left_base_joint
+  - sara_front_right_base_joint
+  - sara_rear_left_base_joint
+  - sara_rear_right_base_joint
+  - sara_right_shoulder_roll_joint
+  - sara_right_shoulder_pitch_joint
+  - sara_right_shoulder_yaw_joint
+  - sara_right_elbow_pitch_joint
+  - sara_right_elbow_yaw_joint
+  - sara_robotiq_hardware_interface
+  - base_actuator_joint
+  - sara_right_wrist_pitch_joint
+  - sara_right_wrist_roll_joint
+  - head_yaw_joint
+  - head_pitch_joint
+
+#--<< WHEELS >>--
+sara_front_left_base_joint:
+  type: wm_fake_hardware_interface/WMFakeHardwareInterface
+  joints:
+    - front_left_mecanum_wheel_joint
+
+sara_front_right_base_joint:
+  type: wm_fake_hardware_interface/WMFakeHardwareInterface
+  joints:
+    - front_right_mecanum_wheel_joint
+
+sara_rear_left_base_joint:
+  type: wm_fake_hardware_interface/WMFakeHardwareInterface
+  joints:
+    - rear_left_mecanum_wheel_joint
+
+sara_rear_right_base_joint:
+  type: wm_fake_hardware_interface/WMFakeHardwareInterface
+  joints:
+    - rear_right_mecanum_wheel_joint
+
+#--<< ARM >>--
+sara_right_shoulder_roll_joint:
+  type: wm_fake_hardware_interface/WMFakeHardwareInterface
+  joints:
+    - right_shoulder_roll_joint
+
+sara_right_shoulder_pitch_joint:
+  type: wm_fake_hardware_interface/WMFakeHardwareInterface
+  joints:
+    - right_shoulder_pitch_joint
+
+sara_right_shoulder_yaw_joint:
+  type: wm_fake_hardware_interface/WMFakeHardwareInterface
+  joints:
+    - right_shoulder_yaw_joint
+
+sara_right_elbow_pitch_joint:
+  type: wm_fake_hardware_interface/WMFakeHardwareInterface
+  joints:
+    - right_elbow_pitch_joint
+
+sara_right_elbow_yaw_joint:
+  type: wm_fake_hardware_interface/WMFakeHardwareInterface
+  joints:
+    - right_elbow_yaw_joint
+
+sara_right_wrist_pitch_joint:
+  type: wm_fake_hardware_interface/WMFakeHardwareInterface
+  joints:
+    - right_wrist_pitch_joint
+
+sara_right_wrist_roll_joint:
+  type: wm_fake_hardware_interface/WMFakeHardwareInterface
+  joints:
+    - right_wrist_roll_joint
+
+#<< GRIPPER >>
+sara_robotiq_hardware_interface:
+  type: wm_fake_hardware_interface/WMFakeHardwareInterface
+  joints:
+    - right_finger_joint
+  mode: position
+
+
+#--<< HEAD >>--
+head_yaw_joint:
+  type: wm_fake_hardware_interface/WMFakeHardwareInterface
+  joints:
+    - head_yaw_joint
+  mode: position
+
+head_pitch_joint:
+  type: wm_fake_hardware_interface/WMFakeHardwareInterface
+  joints:
+    - head_pitch_joint
+
+#--<< COLUMN >>--
+base_actuator_joint:
+  type: wm_fake_hardware_interface/WMFakeHardwareInterface
+  joints:
+    - base_actuator_joint
