@@ -6,6 +6,9 @@
   <rosparam command="load" file="$(find sara_control)/config/sara_hardware.yaml"/>
 
   <!--    start the hardwares and controller manager loop   -->
-  <node name="sara_control" pkg="sara_control" type="sara_control" output="screen"/>
+  <arg name="protocol_version" default="p1"
+       doc="Choses the dynamixel protocol variant to be used (p1 or p2)"/>
+  <node name="sara_control" pkg="sara_control" type="sara_control" output="screen">
+  </node>
 
 </launch>
