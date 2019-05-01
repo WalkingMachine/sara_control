@@ -1,14 +1,15 @@
 robot_hardware:
-#  - sara_front_left_base_joint
-#  - sara_front_right_base_joint
-#  - sara_rear_left_base_joint
-#  - sara_rear_right_base_joint
-#  - sara_right_shoulder_roll_joint
-#  - sara_right_shoulder_pitch_joint
-#  - sara_right_shoulder_yaw_joint
-  - dynamixel_control
-#  - sara_robotiq_hardware_interface
-#  - base_actuator_joint
+  - sara_front_left_base_joint
+  - sara_front_right_base_joint
+  - sara_rear_left_base_joint
+  - sara_rear_right_base_joint
+  - sara_right_shoulder_roll_joint
+  - sara_right_shoulder_pitch_joint
+  - sara_right_shoulder_yaw_joint
+  - dynamixel_control_p1
+#  - dynamixel_control_p2
+  - sara_robotiq_hardware_interface
+  - base_actuator_joint
 
 #--<< WHEELS >>--
 sara_front_left_base_joint:
@@ -148,9 +149,9 @@ sara_head_yaw_dynamixel:
   mode: 1
 
 
-dynamixel_control:
+dynamixel_control_p1:
   type: dynamixel/hardware_interface_p1
-  serial_interface: /dev/ttyUSB0
+  serial_interface: /dev/SARA/motors/dynamixel
   loop_frequency: 50
   cycle_time_error_threshold: 0.1
   baudrate: 57600 # in bauds
@@ -170,18 +171,29 @@ dynamixel_control:
       # offset to be added, in radians, to the position of an actuator
       offset: 3.141592654 # in rad
       command_interface: velocity
-#    head_yaw_joint:
-#      # hardware ID of the actuator
-#      id: 2
-#      # offset to be added, in radians, to the position of an actuator
-#      offset: 3.141592654 # in rad
-#      command_interface: velocity
-#    head_pitch_joint:
-#      # hardware ID of the actuator
-#      id: 2
-#      # offset to be added, in radians, to the position of an actuator
-#      offset: 3.141592654 # in rad
-#      command_interface: velocity
+
+dynamixel_control_p2:
+  type: dynamixel/hardware_interface_p2
+  serial_interface: /SARA/motors/dynamixel
+  loop_frequency: 50
+  cycle_time_error_threshold: 0.1
+  baudrate: 57600 # in bauds
+  read_timeout: 0.05 # in seconds
+  scan_timeout: 0.05 # in seconds
+  # Configuration of the servos
+  servos:
+    head_yaw_joint:
+      # hardware ID of the actuator
+      id: 2
+      # offset to be added, in radians, to the position of an actuator
+      offset: 3.141592654 # in rad
+      command_interface: velocity
+    head_pitch_joint:
+      # hardware ID of the actuator
+      id: 2
+      # offset to be added, in radians, to the position of an actuator
+      offset: 3.141592654 # in rad
+      command_interface: velocity
 
   # default mode
   default_command_interface: velocity
