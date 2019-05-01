@@ -24,19 +24,13 @@ git clone <https://github.com/WalkingMachine/dynamixel_control_hw>
 rosslaunch sara_control sara_hardware.launch
 ```
 
-## Built With
-
-* [Dropwizard](http://www.dropwizard.io/1.0.2/docs/) - The web framework used
-* [Maven](https://maven.apache.org/) - Dependency Management
-* [ROME](https://rometools.github.io/rome/) - Used to generate RSS Feeds
-
 ## Contributing
 
-Please read [CONTRIBUTING.md](https://gist.github.com/walkingmachine/b24679402957c63ec426) for details on our code of conduct, and the process for submitting pull requests to us.
+Please read [CONTRIBUTING.md](https://gist.github.com/JeffCousineau/5ddad03418b09750e2a4afcb198b50e1) for details on our code of conduct, and the process for submitting pull requests to us.
 
 ## Authors
 
-See the list of [contributors](https://github.com/walkingmachine/project/contributors) who participated in this project.
+See the list of [contributors](https://github.com/walkingmachine/sara_control/contributors) who participated in this project.
 
 ## License
 
