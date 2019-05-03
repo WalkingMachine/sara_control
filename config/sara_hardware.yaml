@@ -110,7 +110,7 @@ sara_right_elbow_yaw_joint:
 
 dynamixel_control_p2:
   type: dynamixel/hardware_interface_p2
-  serial_interface: /dev/ttyUSB0
+  serial_interface: /dev/SARA/motors/dynamixel
   loop_frequency: 50
   cycle_time_error_threshold: 0.1
   baudrate: 57600 # in bauds
@@ -144,7 +144,7 @@ sara_robotiq_hardware_interface:
 #--<< HEAD >>--
 dynamixel_control_p1:
   type: dynamixel/hardware_interface_p1
-  serial_interface: /dev/ttyUSB0
+  serial_interface: /dev/SARA/motors/dynamixel
   loop_frequency: 50
   cycle_time_error_threshold: 0.1
   baudrate: 57600 # in bauds
