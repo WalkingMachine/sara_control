@@ -46,7 +46,7 @@ sara_rear_right_base_joint:
 sara_right_shoulder_roll_joint:
   type: wm_kinova_hardware_interface/WMKinovaHardwareInterface
   index: 0
-  offset: -1.095618064
+  offset: -1.663146764
   speed_ratio: 1
   complience_level: 2
   complience_threshold: 12
@@ -166,6 +166,7 @@ dynamixel_control_p1:
       # offset to be added, in radians, to the position of an actuator
       offset: 3.141592654 # in rad
       command_interface: velocity
+      reverse: true
 
 #--<< COLUMN >>--
 base_actuator_joint:
