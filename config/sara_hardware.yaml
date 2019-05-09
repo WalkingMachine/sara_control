@@ -124,14 +124,15 @@ dynamixel_control_p2:
       # hardware ID of the actuator
       id: 1
       # offset to be added, in radians, to the position of an actuator
-      offset: 3.141592654 # in rad
+      offset: 7.47001 # in rad
       command_interface: velocity
     right_wrist_roll_joint:
       # hardware ID of the actuator
       id: 2
       # offset to be added, in radians, to the position of an actuator
-      offset: 3.141592654 # in rad
+      offset: 3.1765 # in rad
       command_interface: velocity
+      reverse: true
 
 
 #<< GRIPPER >>
@@ -167,6 +168,8 @@ dynamixel_control_p1:
       offset: 3.141592654 # in rad
       command_interface: velocity
       reverse: true
+      external_gear_ratio: 2.1333311408
+
 
 #--<< COLUMN >>--
 base_actuator_joint:
