@@ -98,7 +98,7 @@ sara_right_elbow_pitch_joint:
 sara_right_elbow_yaw_joint:
   type: wm_kinova_hardware_interface/WMKinovaHardwareInterface
   index: 4
-  offset: -1.561295116
+  offset: 0.009501211
   speed_ratio: 4
   complience_level: 2
   complience_threshold: 2
@@ -124,15 +124,15 @@ dynamixel_control_p2:
       # hardware ID of the actuator
       id: 1
       # offset to be added, in radians, to the position of an actuator
-      offset: 7.47001 # in rad
+      offset: -3.52556 # in rad
       command_interface: velocity
+      reverse: true
     right_wrist_roll_joint:
       # hardware ID of the actuator
       id: 2
       # offset to be added, in radians, to the position of an actuator
       offset: 3.1765 # in rad
       command_interface: velocity
-      reverse: true
 
 
 #<< GRIPPER >>
@@ -159,13 +159,13 @@ dynamixel_control_p1:
       # hardware ID of the actuator
       id: 3
       # offset to be added, in radians, to the position of an actuator
-      offset: 3.141592654 # in rad
+      offset: 2.941592654 # in rad
       command_interface: velocity
     head_pitch_joint:
       # hardware ID of the actuator
       id: 4
       # offset to be added, in radians, to the position of an actuator
-      offset: 3.141592654 # in rad
+      offset: 3.133411944 # in rad
       command_interface: velocity
       reverse: true
       external_gear_ratio: 2.1333311408
