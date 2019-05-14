@@ -110,26 +110,33 @@ sara_right_elbow_yaw_joint:
   joints:
     - right_elbow_yaw_joint
 
-sara_right_wrist_pitch_joint:
-  type: wm_dynamixel_hardware_interface/WMDynamixelHardwareInterface
-  joints:
-    - right_wrist_pitch_joint
-  id: 1
-  offset: 3.141592654
-  direction: -1
-  simulation: false
-  resolution: 4096
-  ratio: 0.5
 
-sara_right_wrist_roll_joint:
-  type: wm_dynamixel_hardware_interface/WMDynamixelHardwareInterface
-  joints:
-    - right_wrist_roll_joint
-  id: 2
-  offset: 3.141592654
-  direction: -1
-  simulation: false
-  resolution: 4096
+dynamixel_control_p2:
+  type: dynamixel/hardware_interface_p2
+  serial_interface: /dev/SARA/motors/dynamixel
+  loop_frequency: 50
+  cycle_time_error_threshold: 0.1
+  baudrate: 57600 # in bauds
+  read_timeout: 0.05 # in seconds
+  scan_timeout: 0.05 # in seconds
+  # default mode
+  default_command_interface: velocity
+  # Configuration of the servos
+  servos:
+    right_wrist_pitch_joint:
+      # hardware ID of the actuator
+      id: 1
+      # offset to be added, in radians, to the position of an actuator
+      offset: 2.757625307 # in rad
+      command_interface: velocity
+      reverse: true
+    right_wrist_roll_joint:
+      # hardware ID of the actuator
+      id: 2
+      # offset to be added, in radians, to the position of an actuator
+      offset: 3.1765 # in rad
+      command_interface: velocity
+
 
 #<< GRIPPER >>
 sara_robotiq_hardware_interface:
@@ -173,9 +180,9 @@ base_actuator_joint:
   - base_actuator_joint
  cmd_max: 255
  speed_max_up: 0.0279503106
- speed_min_up: 0.0093243243
+ speed_min_up: 0.02
  speed_max_down: 0.02958988
- speed_min_down: 0.010952381
+ speed_min_down: 0.02
  max_height: 0.69
  resolution: 2387
  cmd_topic: "column/cmd"
