@@ -27,14 +27,13 @@ int main(int argc, char **argv) {
 
     WMAdmittance* lAdmittance = WMAdmittance::getInstance();
 
-
     // Initialise period timers
     ros::Time lastRead(ros::Time::now());
     ros::Time lastUpdate(ros::Time::now());
     ros::Time lastWrite(ros::Time::now());
     ros::Time currTime;
 
-
+  
     ros::Rate rate(50);  // 50 Hz
     while (ros::ok()) {
 
@@ -46,8 +45,10 @@ int main(int argc, char **argv) {
         cm.update(ros::Time::now(), currTime-lastUpdate);
         lastUpdate = currTime;
 
+
         lAdmittance->process();
 
+      
         currTime = ros::Time::now();
         chw.write(ros::Time::now(), currTime-lastWrite);
         lastWrite = currTime;
