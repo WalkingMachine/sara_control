@@ -1,5 +1,7 @@
 cmake_minimum_required(VERSION 2.8.3)
 project(sara_control)
+SET(CMAKE_CXX_STANDARD 11)
+add_definitions(-std=c++11)
 
 ## Find catkin macros and libraries
 ## if COMPONENTS list like find_package(catkin REQUIRED COMPONENTS xyz)
@@ -8,6 +10,7 @@ find_package(catkin REQUIRED COMPONENTS
         roscpp
         controller_manager
         combined_robot_hw
+        wm_admittance
         )
 
 ## System dependencies are found with CMake's conventions
@@ -100,7 +103,7 @@ find_package(catkin REQUIRED COMPONENTS
 ## DEPENDS: system dependencies of this project that dependent projects also need
 catkin_package(
         #INCLUDE_DIRS include
-        CATKIN_DEPENDS roscpp controller_manager combined_robot_hw
+        CATKIN_DEPENDS roscpp controller_manager combined_robot_hw wm_admittance
 )
 
 
