@@ -19,11 +19,14 @@ git clone <https://github.com/WalkingMachine/wm_dynamixel>
 git clone <https://github.com/WalkingMachine/dynamixel_control_hw>
 ```
 
-## Running the tests
+# Pour lancer(mode réel)
 ```bash
 rosslaunch sara_control sara_hardware.launch
 ```
-
+# Pour lancer(mode "simulé")
+```bash
+rosslaunch sara_control sara_fake_hardware.launch
+```
 ## Contributing
 
 Please read [CONTRIBUTING.md](https://gist.github.com/JeffCousineau/5ddad03418b09750e2a4afcb198b50e1) for details on our code of conduct, and the process for submitting pull requests to us.
