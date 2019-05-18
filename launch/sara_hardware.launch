@@ -5,6 +5,9 @@
   <!-- load the hardware configuration -->
   <rosparam command="load" file="$(find sara_control)/config/sara_hardware.yaml"/>
 
+  <!-- load the hardware configuration -->
+  <rosparam command="load" file="$(find wm_admittance)/config/wm_admittance.yaml"/>
+
   <!--    start the hardwares and controller manager loop   -->
   <node name="sara_control" pkg="sara_control" type="sara_control" output="screen"/>
 
