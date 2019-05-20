@@ -85,7 +85,6 @@ head_yaw_joint:
   type: wm_fake_hardware_interface/WMFakeHardwareInterface
   joints:
     - head_yaw_joint
-  mode: position
 
 head_pitch_joint:
   type: wm_fake_hardware_interface/WMFakeHardwareInterface

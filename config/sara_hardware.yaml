@@ -178,9 +178,9 @@ base_actuator_joint:
   - base_actuator_joint
  cmd_max: 255
  speed_max_up: 0.0279503106
- speed_min_up: 0.02
+ speed_min_up: 0.0279503106
  speed_max_down: 0.02958988
- speed_min_down: 0.02
+ speed_min_down: 0.02958988
  max_height: 0.69
  resolution: 2387
  cmd_topic: "column/cmd"
