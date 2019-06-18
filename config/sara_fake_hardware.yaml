@@ -62,15 +62,7 @@ sara_right_elbow_yaw_joint:
   joints:
     - right_elbow_yaw_joint
 
-sara_right_wrist_pitch_joint:
-  type: wm_fake_hardware_interface/WMFakeHardwareInterface
-  joints:
-    - right_wrist_pitch_joint
 
-sara_right_wrist_roll_joint:
-  type: wm_fake_hardware_interface/WMFakeHardwareInterface
-  joints:
-    - right_wrist_roll_joint
 
 #<< GRIPPER >>
 sara_robotiq_hardware_interface:

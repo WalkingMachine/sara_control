@@ -5,9 +5,11 @@
   <!-- load the hardware configuration -->
   <rosparam command="load" file="$(find sara_control)/config/sara_fake_hardware.yaml"/>
 
+
+  <!-- load the hardware configuration -->
+  <rosparam command="load" file="$(find wm_admittance)/config/wm_admittance.yaml"/>
+
+
   <!--    start the hardwares and controller manager loop   -->
-  <arg name="protocol_version" default="p1"
-       doc="Choses the dynamixel protocol variant to be used (p1 or p2)"/>
-  <node name="sara_control" pkg="sara_control" type="sara_control" output="screen">
-  </node>
+  <node name="sara_control" pkg="sara_control" type="sara_control" output="screen"/>
 </launch>

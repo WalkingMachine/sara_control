@@ -10,8 +10,13 @@ robot_hardware:
   - sara_right_elbow_yaw_joint
   - dynamixel_control_p1
   - dynamixel_control_p2
+  #- sara_right_wrist_pitch_joint
+  #- sara_right_wrist_roll_joint
   - sara_robotiq_hardware_interface
   - base_actuator_joint
+#  - fake_base_actuator_joint
+  #- head_yaw_joint
+  #- head_pitch_joint
 
 #--<< WHEELS >>--
 sara_front_left_base_joint:
@@ -48,7 +53,7 @@ sara_right_shoulder_roll_joint:
   index: 0
   offset: -1.663146764
   speed_ratio: 1
-  complience_level: 2
+  complience_level: 1
   complience_threshold: 12
   complience_derivation_factor: 0.03
   complience_loss_factor: 0.75
@@ -61,7 +66,7 @@ sara_right_shoulder_pitch_joint:
   index: 1
   offset: 3.088521263
   speed_ratio: 1
-  complience_level: 2
+  complience_level: 1
   complience_threshold: 12
   complience_derivation_factor: 0.03
   complience_loss_factor: 0.75
@@ -74,7 +79,7 @@ sara_right_shoulder_yaw_joint:
   index: 2
   offset: 1.360509039
   speed_ratio: 1
-  complience_level: 2
+  complience_level: 1
   complience_threshold: 3
   complience_derivation_factor: 0.02
   complience_loss_factor: 0.75
@@ -87,7 +92,7 @@ sara_right_elbow_pitch_joint:
   index: 3
   offset: 2.972071485
   speed_ratio: 2
-  complience_level: 2
+  complience_level: 1
   complience_threshold: 3
   complience_derivation_factor: 0.02
   complience_loss_factor: 0.9
@@ -100,7 +105,7 @@ sara_right_elbow_yaw_joint:
   index: 4
   offset: 0.009501211
   speed_ratio: 4
-  complience_level: 2
+  complience_level: 1
   complience_threshold: 2
   complience_derivation_factor: 0.01
   complience_loss_factor: 0.96
@@ -124,7 +129,7 @@ dynamixel_control_p2:
       # hardware ID of the actuator
       id: 1
       # offset to be added, in radians, to the position of an actuator
-      offset: -3.52556 # in rad
+      offset: 2.657625307 # in rad
       command_interface: velocity
       reverse: true
     right_wrist_roll_joint:
@@ -159,7 +164,7 @@ dynamixel_control_p1:
       # hardware ID of the actuator
       id: 3
       # offset to be added, in radians, to the position of an actuator
-      offset: 2.941592654 # in rad
+      offset: 3.05 # in rad
       command_interface: velocity
     head_pitch_joint:
       # hardware ID of the actuator
@@ -185,3 +190,32 @@ base_actuator_joint:
  resolution: 2387
  cmd_topic: "column/cmd"
  position_topic: "column/position"
+
+
+#--<< COLUMN >>--
+fake_base_actuator_joint:
+  type: wm_fake_hardware_interface/WMFakeHardwareInterface
+  joints:
+    - base_actuator_joint
+
+sara_right_wrist_pitch_joint:
+  type: wm_fake_hardware_interface/WMFakeHardwareInterface
+  joints:
+    - right_wrist_pitch_joint
+
+sara_right_wrist_roll_joint:
+  type: wm_fake_hardware_interface/WMFakeHardwareInterface
+  joints:
+    - right_wrist_roll_joint
+
+
+#--<< HEAD >>--
+head_yaw_joint:
+  type: wm_fake_hardware_interface/WMFakeHardwareInterface
+  joints:
+    - head_yaw_joint
+
+head_pitch_joint:
+  type: wm_fake_hardware_interface/WMFakeHardwareInterface
+  joints:
+    - head_pitch_joint
