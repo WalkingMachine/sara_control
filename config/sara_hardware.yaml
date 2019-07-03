@@ -182,6 +182,6 @@ base_actuator_joint:
  speed_max_down: 0.02958988
  speed_min_down: 0.02
  max_height: 0.69
- resolution: 2387
+ resolution: 1900
  cmd_topic: "column/cmd"
  position_topic: "column/position"
