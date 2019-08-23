@@ -51,7 +51,7 @@ sara_rear_right_base_joint:
 sara_right_shoulder_roll_joint:
   type: wm_kinova_hardware_interface/WMKinovaHardwareInterface
   index: 0
-  offset: -1.663146764
+  offset: -2.4014315686
   speed_ratio: 1
   complience_level: 1
   complience_threshold: 12
@@ -64,7 +64,7 @@ sara_right_shoulder_roll_joint:
 sara_right_shoulder_pitch_joint:
   type: wm_kinova_hardware_interface/WMKinovaHardwareInterface
   index: 1
-  offset: 3.088521263
+  offset: 3.1465013172
   speed_ratio: 1
   complience_level: 1
   complience_threshold: 12
@@ -77,7 +77,7 @@ sara_right_shoulder_pitch_joint:
 sara_right_shoulder_yaw_joint:
   type: wm_kinova_hardware_interface/WMKinovaHardwareInterface
   index: 2
-  offset: 1.360509039
+  offset: 1.2974469238
   speed_ratio: 1
   complience_level: 1
   complience_threshold: 3
@@ -90,7 +90,7 @@ sara_right_shoulder_yaw_joint:
 sara_right_elbow_pitch_joint:
   type: wm_kinova_hardware_interface/WMKinovaHardwareInterface
   index: 3
-  offset: 2.972071485
+  offset: 2.9731556833
   speed_ratio: 2
   complience_level: 1
   complience_threshold: 3
@@ -103,7 +103,7 @@ sara_right_elbow_pitch_joint:
 sara_right_elbow_yaw_joint:
   type: wm_kinova_hardware_interface/WMKinovaHardwareInterface
   index: 4
-  offset: 0.009501211
+  offset: 0.010710152
   speed_ratio: 4
   complience_level: 1
   complience_threshold: 2
@@ -129,14 +129,14 @@ dynamixel_control_p2:
       # hardware ID of the actuator
       id: 1
       # offset to be added, in radians, to the position of an actuator
-      offset: 2.657625307 # in rad
+      offset: 2.9147010553 # in rad
       command_interface: velocity
       reverse: true
     right_wrist_roll_joint:
       # hardware ID of the actuator
       id: 2
       # offset to be added, in radians, to the position of an actuator
-      offset: 3.1765 # in rad
+      offset: 3.1764981028 # in rad
       command_interface: velocity
 
 
@@ -170,7 +170,7 @@ dynamixel_control_p1:
       # hardware ID of the actuator
       id: 4
       # offset to be added, in radians, to the position of an actuator
-      offset: 3.133411944 # in rad
+      offset: 3.4895511054 # in rad
       command_interface: velocity
       reverse: true
       external_gear_ratio: 2.1333311408
@@ -186,8 +186,8 @@ base_actuator_joint:
  speed_min_up: 0.0279503106
  speed_max_down: 0.02958988
  speed_min_down: 0.02958988
- max_height: 0.69
- resolution: 2387
+ max_height: 0.675
+ resolution: 1900
  cmd_topic: "column/cmd"
  position_topic: "column/position"
 
