@@ -170,7 +170,7 @@ dynamixel_control_p1:
       # hardware ID of the actuator
       id: 4
       # offset to be added, in radians, to the position of an actuator
-      offset: 3.4895511054 # in rad
+      offset: 3.6395511054 # in rad  positive is down
       command_interface: velocity
       reverse: true
       external_gear_ratio: 2.1333311408
